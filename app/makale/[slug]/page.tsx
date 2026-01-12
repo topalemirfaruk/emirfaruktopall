@@ -43,7 +43,18 @@ export async function generateMetadata({ params }: ArticlePageProps) {
       description: article.excerpt,
       type: 'article',
       url: `/makale/${slug}`,
-      publishedTime: new Date(article.date).toISOString(), // Try to convert to ISO if possible, or fallback
+      publishedTime: (() => {
+        try {
+          const date = new Date(article.date)
+          // Check if date is valid
+          if (isNaN(date.getTime())) {
+            return article.createdAt.toISOString()
+          }
+          return date.toISOString()
+        } catch {
+          return article.createdAt.toISOString()
+        }
+      })(),
       authors: [article.author],
       images: [
         {
