@@ -8,9 +8,38 @@ const _geist = Geist({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Emir Faruk Topal - Linux System Administrator",
+  metadataBase: new URL('https://emirfaruktopal.com'), // Replace with actual domain
+  title: {
+    default: "Emir Faruk Topal - Linux System Administrator",
+    template: "%s | Emir Faruk Topal"
+  },
   description: "Junior Linux System Administrator. Portfolio, blog, and tutorials on Linux systems and open source technologies.",
-  generator: "Next.js",
+  keywords: ["Linux", "System Administration", "DevOps", "Open Source", "Software Development", "Next.js", "React"],
+  authors: [{ name: "Emir Faruk Topal" }],
+  creator: "Emir Faruk Topal",
+  openGraph: {
+    type: "website",
+    locale: "tr_TR",
+    url: "https://emirfaruktopal.com",
+    title: "Emir Faruk Topal - Linux System Administrator",
+    description: "Junior Linux System Administrator. Portfolio, blog, and tutorials on Linux systems and open source technologies.",
+    siteName: "Emir Faruk Topal",
+    images: [
+      {
+        url: "/og-image.jpg", // Needs to be created or mapped
+        width: 1200,
+        height: 630,
+        alt: "Emir Faruk Topal - Linux System Administrator",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Emir Faruk Topal - Linux System Administrator",
+    description: "Junior Linux System Administrator. Portfolio, blog, and tutorials on Linux systems and open source technologies.",
+    images: ["/og-image.jpg"],
+    creator: "@emirfaruktopal", // Update if known or remove
+  },
   icons: {
     icon: [
       {
@@ -27,6 +56,17 @@ export const metadata: Metadata = {
       },
     ],
     apple: "/apple-icon.png",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
 }
 

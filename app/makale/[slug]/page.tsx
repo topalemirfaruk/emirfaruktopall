@@ -6,8 +6,50 @@ import { Sidebar } from "@/components/sidebar"
 import { ArticleInteractions } from "@/components/article-interactions"
 import { CommentSection } from "@/components/comment-section"
 
+import Script from "next/script"
+
 interface ArticlePageProps {
   params: Promise<{ slug: string }>
+}
+
+export async function generateMetadata({ params }: ArticlePageProps) {
+  const { slug } = await params
+  const article = await prisma.article.findUnique({
+    where: { slug },
+  })
+
+  if (!article) {
+    return {
+      title: 'Bulunamadı | Emir Faruk Topal',
+      description: 'Aradığınız makale bulunamadı.',
+    }
+  }
+
+  return {
+    title: article.title,
+    description: article.excerpt,
+    openGraph: {
+      title: article.title,
+      description: article.excerpt,
+      type: 'article',
+      publishedTime: article.date, // Note: This might need parsing if format is not ISO
+      authors: [article.author],
+      images: [
+        {
+          url: article.image || '/og-image.jpg',
+          width: 1200,
+          height: 630,
+          alt: article.title,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: article.title,
+      description: article.excerpt,
+      images: [article.image || '/og-image.jpg'],
+    },
+  }
 }
 
 export default async function ArticlePage({ params }: ArticlePageProps) {
@@ -76,6 +118,26 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
                 </div>
               </div>
             </div>
+
+            {/* JSON-LD Structured Data */}
+            <Script
+              id="article-json-ld"
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{
+                __html: JSON.stringify({
+                  '@context': 'https://schema.org',
+                  '@type': 'Article',
+                  headline: article.title,
+                  description: article.excerpt,
+                  image: article.image ? [article.image] : [],
+                  datePublished: article.date, // Needs ISO format ideally
+                  author: {
+                    '@type': 'Person',
+                    name: article.author,
+                  },
+                }),
+              }}
+            />
 
             {/* Interactions */}
             <ArticleInteractions article={uiArticle} />
