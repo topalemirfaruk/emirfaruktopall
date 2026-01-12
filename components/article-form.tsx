@@ -59,13 +59,67 @@ export function ArticleForm({ article, defaultCategory }: ArticleFormProps) {
                 </div>
 
                 <div className="space-y-2">
-                    <label className="text-sm font-medium text-white">Görsel URL</label>
-                    <input
-                        name="image"
-                        defaultValue={article?.image || ""}
-                        className="w-full bg-[#0d120d] border border-[#1a2e1a] rounded px-4 py-2 text-white focus:outline-none focus:border-[#22c55e]"
-                        placeholder="/placeholder.png"
-                    />
+                    <label className="text-sm font-medium text-white">Görsel</label>
+                    <div className="flex flex-col gap-4">
+                        {/* Hidden input for URL/Base64 submission */}
+                        <input
+                            name="image"
+                            type="hidden"
+                            defaultValue={article?.image || ""}
+                            id="image-url-input"
+                        />
+
+                        {/* File Upload UI */}
+                        <div className="flex items-center gap-4">
+                            <input
+                                type="file"
+                                accept="image/*"
+                                className="text-sm text-[#6b7280] file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-[#1a2e1a] file:text-[#22c55e] hover:file:bg-[#22c55e]/20 cursor-pointer"
+                                onChange={(e) => {
+                                    const file = e.target.files?.[0]
+                                    if (file) {
+                                        const reader = new FileReader()
+                                        reader.onloadend = () => {
+                                            const base64 = reader.result as string
+                                            // Update hidden input
+                                            const hiddenInput = document.getElementById('image-url-input') as HTMLInputElement
+                                            if (hiddenInput) hiddenInput.value = base64
+                                            // Update preview if possible (optional, but good UX)
+                                            const preview = document.getElementById('image-preview') as HTMLImageElement
+                                            if (preview) preview.src = base64
+                                        }
+                                        reader.readAsDataURL(file)
+                                    }
+                                }}
+                            />
+                            <span className="text-xs text-[#6b7280]">veya URL girin:</span>
+                        </div>
+
+                        {/* Text URL Fallback */}
+                        <input
+                            type="text"
+                            placeholder="https://..."
+                            className="w-full bg-[#0d120d] border border-[#1a2e1a] rounded px-4 py-2 text-white focus:outline-none focus:border-[#22c55e] text-sm"
+                            onChange={(e) => {
+                                const hiddenInput = document.getElementById('image-url-input') as HTMLInputElement
+                                if (hiddenInput) hiddenInput.value = e.target.value
+                                const preview = document.getElementById('image-preview') as HTMLImageElement
+                                if (preview) preview.src = e.target.value
+                            }}
+                            defaultValue={article?.image || ""}
+                        />
+
+                        {/* Preview */}
+                        <div className="relative w-full h-48 bg-[#0a0f0a] border border-[#1a2e1a] rounded overflow-hidden flex items-center justify-center">
+                            <img
+                                id="image-preview"
+                                src={article?.image || "/placeholder.svg"}
+                                alt="Önizleme"
+                                className="h-full w-auto object-contain"
+                                onError={(e) => (e.currentTarget.src = "/placeholder.svg")}
+                            />
+                        </div>
+                    </div>
                 </div>
             </div>
 

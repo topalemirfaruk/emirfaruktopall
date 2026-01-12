@@ -30,6 +30,7 @@ export async function createArticle(formData: FormData) {
             date,
             readTime: "5 dk", // Calculate based on word count later
             image: image || null,
+            avatar: "https://github.com/topalemirfaruk.png", // Default admin avatar
             githubUrl: githubUrl || null,
         }
     })
