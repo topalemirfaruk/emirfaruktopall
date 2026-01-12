@@ -105,12 +105,19 @@ export function ArticleCard({ article }: { article: Article }) {
               <span>{likesCount}</span>
             </button>
 
+            {/* <Link // Commented out until Disqus count integration
+              href={`/makale/${article.slug}#yorumlar`}
+              className="flex items-center gap-1.5 text-[#6b7280] hover:text-[#22c55e] text-sm transition-colors"
+            >
+              <MessageCircle className="w-4 h-4" />
+              <span>Yorum Yap</span>
+            </Link> */}
             <Link
               href={`/makale/${article.slug}#yorumlar`}
               className="flex items-center gap-1.5 text-[#6b7280] hover:text-[#22c55e] text-sm transition-colors"
             >
               <MessageCircle className="w-4 h-4" />
-              <span>{article.comments.length}</span>
+              <span>Yorumlar</span>
             </Link>
 
             <button

@@ -92,3 +92,19 @@ export async function deleteArticle(id: number) {
     revalidatePath("/dagitimlar")
     revalidatePath("/projelerim")
 }
+
+export async function incrementLike(slug: string) {
+    await prisma.article.update({
+        where: { slug },
+        data: { likes: { increment: 1 } }
+    })
+    revalidatePath(`/makale/${slug}`)
+}
+
+export async function incrementShare(slug: string) {
+    await prisma.article.update({
+        where: { slug },
+        data: { shares: { increment: 1 } }
+    })
+    revalidatePath(`/makale/${slug}`)
+}

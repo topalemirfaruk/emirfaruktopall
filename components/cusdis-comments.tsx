@@ -22,7 +22,7 @@ export function CusdisComments({ pageId, pageUrl, pageTitle }: CusdisCommentsPro
                             pageId: pageId,
                             pageTitle: pageTitle,
                             pageUrl: pageUrl,
-                            theme: 'dark'
+                            theme: 'auto'
                         }}
                     />
                 </div>
