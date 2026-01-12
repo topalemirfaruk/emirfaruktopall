@@ -236,11 +236,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
           </div>
 
           {/* Comments */}
-          <DisqusComments
-            url={`https://emirfaruktopal.com/makale/${article.slug}`}
-            identifier={article.slug}
-            title={article.title}
-          />
+          <GiscusComments />
         </div>
       </main>
     </div>
