@@ -81,7 +81,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
       <Sidebar />
       <main className="flex-1 overflow-y-auto">
         {/* Header Image */}
-        <div className="relative aspect-video w-full">
+        <div className="relative w-full h-[400px] md:h-[500px]">
           <img src={article.image || "/placeholder.svg"} alt={article.title} className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-t from-[#0a0f0a] via-[#0a0f0a]/50 to-transparent" />
 
