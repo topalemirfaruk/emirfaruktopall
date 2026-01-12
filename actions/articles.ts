@@ -34,8 +34,14 @@ export async function createArticle(formData: FormData) {
         }
     })
 
+    revalidatePath("/", "layout")
     revalidatePath("/admin/articles")
+    revalidatePath("/admin/projects")
     revalidatePath("/makaleler")
+    revalidatePath("/haberler")
+    revalidatePath("/ogreticiler")
+    revalidatePath("/dagitimlar")
+    revalidatePath("/projelerim")
     redirect("/admin/articles")
 }
 
@@ -63,7 +69,14 @@ export async function updateArticle(id: number, formData: FormData) {
         }
     })
 
+    revalidatePath("/", "layout")
     revalidatePath("/admin/articles")
+    revalidatePath("/admin/projects")
+    revalidatePath("/makaleler")
+    revalidatePath("/haberler")
+    revalidatePath("/ogreticiler")
+    revalidatePath("/dagitimlar")
+    revalidatePath("/projelerim")
     revalidatePath(`/makale/${slug}`)
     redirect("/admin/articles")
 }
