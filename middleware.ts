@@ -3,6 +3,7 @@ import { clerkMiddleware, createRouteMatcher } from '@clerk/nextjs/server'
 const isPublicRoute = createRouteMatcher([
     '/',
     '/makaleler(.*)',
+    '/makale(.*)', // Added individual article pages
     '/ogreticiler(.*)',
     '/haberler(.*)',
     '/komutlar(.*)',
@@ -11,7 +12,8 @@ const isPublicRoute = createRouteMatcher([
     '/topluluk(.*)',
     '/hakkimizda(.*)',
     '/sign-in(.*)',
-    '/sign-up(.*)'
+    '/sign-up(.*)',
+    '/api/og-image(.*)' // Open for social media crawlers
 ])
 
 export default clerkMiddleware(async (auth, request) => {
