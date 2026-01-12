@@ -16,10 +16,10 @@ export function GiscusComments() {
                     category={process.env.NEXT_PUBLIC_GISCUS_CATEGORY || ""}
                     categoryId={process.env.NEXT_PUBLIC_GISCUS_CATEGORY_ID || ""}
                     mapping="pathname"
-                    term="Welcome to @giscus/react component!"
+                    strict="0"
                     reactionsEnabled="1"
                     emitMetadata="0"
-                    inputPosition="top"
+                    inputPosition="bottom"
                     theme="dark" // Always dark for this site design, or use {theme === 'dark' ? 'dark' : 'light'} if light mode is supported
                     lang="tr"
                     loading="lazy"
