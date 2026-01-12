@@ -4,7 +4,7 @@ import { ArrowLeft, Clock, Tag } from "lucide-react"
 import { prisma } from "@/lib/prisma"
 import { Sidebar } from "@/components/sidebar"
 import { ArticleInteractions } from "@/components/article-interactions"
-import { CusdisComments } from "@/components/cusdis-comments"
+import { GiscusComments } from "@/components/giscus-comments"
 
 import Script from "next/script"
 import ReactMarkdown from "react-markdown"
@@ -265,11 +265,8 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
           </div>
 
           {/* Comments */}
-          <CusdisComments
-            pageId={article.slug}
-            pageUrl={`https://emirfaruktopal.com/makale/${article.slug}`}
-            pageTitle={article.title}
-          />
+          {/* Comments */}
+          <GiscusComments />
         </div>
       </main>
     </div>
