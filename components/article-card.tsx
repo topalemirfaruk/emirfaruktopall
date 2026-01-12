@@ -47,6 +47,7 @@ export function ArticleCard({ article }: { article: Article }) {
             <img
               src={article.image || "/placeholder.svg"}
               alt={article.title}
+              onError={(e) => (e.currentTarget.src = "/placeholder.svg")}
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
             />
             <div className="absolute bottom-3 left-3">

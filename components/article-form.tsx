@@ -78,17 +78,41 @@ export function ArticleForm({ article, defaultCategory }: ArticleFormProps) {
                                 onChange={(e) => {
                                     const file = e.target.files?.[0]
                                     if (file) {
-                                        const reader = new FileReader()
-                                        reader.onloadend = () => {
-                                            const base64 = reader.result as string
-                                            // Update hidden input
-                                            const hiddenInput = document.getElementById('image-url-input') as HTMLInputElement
-                                            if (hiddenInput) hiddenInput.value = base64
-                                            // Update preview if possible (optional, but good UX)
-                                            const preview = document.getElementById('image-preview') as HTMLImageElement
-                                            if (preview) preview.src = base64
-                                        }
-                                        reader.readAsDataURL(file)
+                                        // Compress image logic
+                                        const reader = new FileReader();
+                                        reader.onload = (event) => {
+                                            const img = new Image();
+                                            img.onload = () => {
+                                                const canvas = document.createElement('canvas');
+                                                const MAX_WIDTH = 800; // Resize to max 800px width
+                                                let width = img.width;
+                                                let height = img.height;
+
+                                                if (width > MAX_WIDTH) {
+                                                    height *= MAX_WIDTH / width;
+                                                    width = MAX_WIDTH;
+                                                }
+
+                                                canvas.width = width;
+                                                canvas.height = height;
+
+                                                const ctx = canvas.getContext('2d');
+                                                ctx?.drawImage(img, 0, 0, width, height);
+
+                                                // Compress to JPEG with 0.7 quality
+                                                const compressedBase64 = canvas.toDataURL('image/jpeg', 0.7);
+
+                                                // Update hidden input
+                                                const hiddenInput = document.getElementById('image-url-input') as HTMLInputElement;
+                                                if (hiddenInput) hiddenInput.value = compressedBase64;
+
+                                                // Update preview
+                                                const preview = document.getElementById('image-preview') as HTMLImageElement;
+                                                if (preview) preview.src = compressedBase64;
+                                            };
+                                            img.src = event.target?.result as string;
+                                        };
+                                        reader.readAsDataURL(file);
                                     }
                                 }}
                             />
