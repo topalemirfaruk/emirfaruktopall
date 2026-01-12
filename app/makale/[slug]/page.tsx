@@ -81,14 +81,28 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
       <Sidebar />
       <main className="flex-1 overflow-y-auto">
         {/* Header Image */}
-        <div className="relative w-full h-[400px] md:h-[500px]">
-          <img src={article.image || "/placeholder.svg"} alt={article.title} className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#0a0f0a] via-[#0a0f0a]/50 to-transparent" />
+        <div className="relative w-full h-[400px] md:h-[500px] bg-[#0a0f0a] overflow-hidden group">
+          {/* Blurred Background */}
+          <div
+            className="absolute inset-0 bg-cover bg-center blur-xl opacity-30 scale-110"
+            style={{ backgroundImage: `url(${article.image || "/placeholder.svg"})` }}
+          />
+
+          {/* Main Image - Contained */}
+          <div className="relative h-full w-full flex items-center justify-center p-4">
+            <img
+              src={article.image || "/placeholder.svg"}
+              alt={article.title}
+              className="h-full w-auto object-contain shadow-2xl rounded-lg max-w-full"
+            />
+          </div>
+
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0a0f0a] via-transparent to-transparent" />
 
           {/* Back Button */}
           <Link
             href="/"
-            className="absolute top-6 left-6 flex items-center gap-2 px-4 py-2 bg-black/50 backdrop-blur-sm rounded-lg text-white hover:bg-black/70 transition-colors"
+            className="absolute top-6 left-6 flex items-center gap-2 px-4 py-2 bg-black/50 backdrop-blur-sm rounded-lg text-white hover:bg-black/70 transition-colors z-20"
           >
             <ArrowLeft className="w-4 h-4" />
             <span className="text-sm">Geri</span>
