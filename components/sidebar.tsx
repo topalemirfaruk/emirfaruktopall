@@ -3,7 +3,15 @@ import { SidebarContent } from "./sidebar-content"
 import { MobileSidebar } from "./mobile-sidebar"
 
 export async function Sidebar() {
-  const settings = await getSiteSettings()
+  let settings = await getSiteSettings()
+
+  // Serialize dates if settings exist
+  if (settings) {
+    settings = {
+      ...settings,
+      updatedAt: (settings.updatedAt as Date).toISOString() as any // Cast to any to bypass type mismatch quickly
+    }
+  }
 
   return (
     <>
