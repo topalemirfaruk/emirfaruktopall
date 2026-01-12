@@ -5,19 +5,26 @@ import { ArticlesSection } from "@/components/articles-section"
 import { prisma } from "@/lib/prisma"
 
 export default async function Home() {
-  const articles = await prisma.article.findMany({
-    where: {
-      category: { not: "Projeler" }
-    },
-    orderBy: { createdAt: "desc" },
-    include: { comments: true }
-  })
+  let formattedArticles: any[] = []
 
-  // Normalize data if needed (e.g. tags split)
-  const formattedArticles = articles.map((a: any) => ({
-    ...a,
-    tags: a.tags.split(','), // Convert string to array for UI
-  }))
+  try {
+    const articles = await prisma.article.findMany({
+      where: {
+        category: { not: "Projeler" }
+      },
+      orderBy: { createdAt: "desc" },
+      include: { comments: true }
+    })
+
+    // Normalize data if needed (e.g. tags split)
+    formattedArticles = articles.map((a: any) => ({
+      ...a,
+      tags: a.tags.split(','), // Convert string to array for UI
+    }))
+  } catch (error) {
+    console.error("Failed to fetch articles:", error)
+    // formattedArticles remains []
+  }
 
   return (
     <div className="flex min-h-screen bg-[#0a0f0a]">
