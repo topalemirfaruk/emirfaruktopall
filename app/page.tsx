@@ -16,10 +16,17 @@ export default async function Home() {
       include: { comments: true }
     })
 
-    // Normalize data if needed (e.g. tags split)
+    // Normalize data if needed (e.g. tags split, dates serialized)
     formattedArticles = articles.map((a: any) => ({
       ...a,
       tags: a.tags.split(','), // Convert string to array for UI
+      createdAt: a.createdAt?.toISOString(),
+      updatedAt: a.updatedAt?.toISOString(),
+      // comments are also included, ensure no Date objects there if passed to client
+      comments: a.comments.map((c: any) => ({
+        ...c,
+        createdAt: c.createdAt?.toISOString(),
+      }))
     }))
   } catch (error) {
     console.error("Failed to fetch articles:", error)
