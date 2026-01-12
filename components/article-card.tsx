@@ -49,7 +49,7 @@ export function ArticleCard({ article }: { article: Article }) {
               alt={article.title}
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
             />
-            <div className="absolute top-3 left-3">
+            <div className="absolute bottom-3 left-3">
               <span className="px-2 py-1 bg-[#22c55e] text-black text-xs font-semibold rounded">
                 {article.category}
               </span>
