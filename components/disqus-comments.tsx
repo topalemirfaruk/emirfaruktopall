@@ -9,7 +9,7 @@ interface DisqusCommentsProps {
 }
 
 export function DisqusComments({ url, identifier, title }: DisqusCommentsProps) {
-    const disqusShortname = "emirfaruktopal" // Update this with your actual shortname
+    const disqusShortname = process.env.NEXT_PUBLIC_DISQUS_SHORTNAME || "emirfaruktopal"
 
     const disqusConfig = {
         url,
