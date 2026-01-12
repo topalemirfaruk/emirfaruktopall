@@ -1,0 +1,59 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model Article {
+  id        Int       @id @default(autoincrement())
+  slug      String    @unique
+  title     String
+  excerpt   String
+  content   String
+  category  String
+  author    String
+  avatar    String?
+  date      String
+  readTime  String
+  likes     Int       @default(0)
+  shares    Int       @default(0)
+  image     String?
+  githubUrl String?
+  tags      String    // Comma separated tags
+  comments  Comment[]
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+}
+
+model Comment {
+  id        Int       @id @default(autoincrement())
+  content   String
+  author    String
+  avatar    String?
+  date      String
+  likes     Int       @default(0)
+  articleId Int
+  article   Article   @relation(fields: [articleId], references: [id], onDelete: Cascade)
+  parentId  Int?
+  parent    Comment?  @relation("CommentReplies", fields: [parentId], references: [id])
+  replies   Comment[] @relation("CommentReplies")
+  createdAt DateTime  @default(now())
+}
+
+model SiteConfig {
+  id             Int      @id @default(autoincrement())
+  ownerName      String   @default("Emir Faruk Topal")
+  ownerTitle     String   @default("LINUX SYSTEM ADMIN")
+  sidebarTitle   String   @default("LINUX SYSTEM ADMIN")
+  heroTitle      String   @default("Linux Sistem Yönetimi ve Özgür Yazılım Dünyası")
+  heroDescription String  @default("Linux sistem yönetimi, sunucu optimizasyonu ve açık kaynak teknolojiler üzerine rehberler, ipuçları ve detaylı analizler.")
+  aboutContent   String   @default("Hakkımda içeriği buraya gelecek.")
+  socialGithub   String   @default("https://github.com")
+  socialTwitter  String?
+  socialLinkedin String?
+  socialEmail    String?
+  updatedAt      DateTime @updatedAt
+}
