@@ -4,7 +4,7 @@ import { ArrowLeft, Clock, Tag } from "lucide-react"
 import { prisma } from "@/lib/prisma"
 import { Sidebar } from "@/components/sidebar"
 import { ArticleInteractions } from "@/components/article-interactions"
-import { GiscusComments } from "@/components/giscus-comments"
+import { CusdisComments } from "@/components/cusdis-comments"
 
 import Script from "next/script"
 import ReactMarkdown from "react-markdown"
@@ -35,11 +35,15 @@ export async function generateMetadata({ params }: ArticlePageProps) {
   return {
     title: article.title,
     description: article.excerpt,
+    alternates: {
+      canonical: `/makale/${slug}`,
+    },
     openGraph: {
       title: article.title,
       description: article.excerpt,
       type: 'article',
-      publishedTime: article.date, // Note: This might need parsing if format is not ISO
+      url: `/makale/${slug}`,
+      publishedTime: new Date(article.date).toISOString(), // Try to convert to ISO if possible, or fallback
       authors: [article.author],
       images: [
         {
@@ -236,7 +240,11 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
           </div>
 
           {/* Comments */}
-          <GiscusComments />
+          <CusdisComments
+            pageId={article.slug}
+            pageUrl={`https://emirfaruktopal.com/makale/${article.slug}`}
+            pageTitle={article.title}
+          />
         </div>
       </main>
     </div>
