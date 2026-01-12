@@ -9,23 +9,14 @@ interface SidebarContentProps {
 export function SidebarContent({ settings }: SidebarContentProps) {
     return (
         <div className="flex flex-col h-full bg-[#060a06] border-r border-[#1a2e1a]">
-            {/* Logo */}
+            {/* Logo / Profile Picture */}
             <Link href="/" className="p-5 flex items-center gap-3 hover:opacity-80 transition-opacity">
-                <div className="w-9 h-9 flex items-center justify-center">
-                    <svg viewBox="0 0 40 40" className="w-9 h-9">
-                        <circle cx="20" cy="20" r="16" fill="#0d120d" stroke="#22c55e" strokeWidth="2" />
-                        <text
-                            x="20"
-                            y="26"
-                            textAnchor="middle"
-                            fill="#22c55e"
-                            fontSize="16"
-                            fontFamily="monospace"
-                            fontWeight="bold"
-                        >
-                            &gt;_
-                        </text>
-                    </svg>
+                <div className="w-10 h-10 relative overflow-hidden rounded-full border border-[#22c55e]/30">
+                    <img
+                        src="https://github.com/topalemirfaruk.png"
+                        alt={settings?.ownerName || "Emir Faruk Topal"}
+                        className="w-full h-full object-cover"
+                    />
                 </div>
                 <div>
                     <div className="text-white font-bold text-sm leading-tight tracking-normal">
