@@ -97,24 +97,17 @@ export function ArticleCard({ article }: { article: Article }) {
             <button
               onClick={handleLike}
               className={cn(
-                "flex items-center gap-1.5 text-sm transition-colors",
-                liked ? "text-[#22c55e]" : "text-[#6b7280] hover:text-[#22c55e]",
+                "flex items-center gap-2 text-sm transition-all px-3 py-1.5 rounded-full hover:bg-[#1a2e1a]",
+                liked ? "text-[#22c55e] bg-[#22c55e]/10" : "text-[#a1a1aa] hover:text-[#22c55e]",
               )}
             >
               <Heart className={cn("w-4 h-4", liked && "fill-current")} />
               <span>{likesCount}</span>
             </button>
 
-            {/* <Link // Commented out until Disqus count integration
-              href={`/makale/${article.slug}#yorumlar`}
-              className="flex items-center gap-1.5 text-[#6b7280] hover:text-[#22c55e] text-sm transition-colors"
-            >
-              <MessageCircle className="w-4 h-4" />
-              <span>Yorum Yap</span>
-            </Link> */}
             <Link
               href={`/makale/${article.slug}#yorumlar`}
-              className="flex items-center gap-1.5 text-[#6b7280] hover:text-[#22c55e] text-sm transition-colors"
+              className="flex items-center gap-2 text-[#a1a1aa] hover:text-[#22c55e] text-sm transition-all px-3 py-1.5 rounded-full hover:bg-[#1a2e1a]"
             >
               <MessageCircle className="w-4 h-4" />
               <span>Yorumlar</span>
@@ -122,7 +115,7 @@ export function ArticleCard({ article }: { article: Article }) {
 
             <button
               onClick={handleShare}
-              className="flex items-center gap-1.5 text-[#6b7280] hover:text-[#22c55e] text-sm transition-colors"
+              className="flex items-center gap-2 text-[#a1a1aa] hover:text-[#22c55e] text-sm transition-all px-3 py-1.5 rounded-full hover:bg-[#1a2e1a]"
             >
               <Share2 className="w-4 h-4" />
               <span>{article.shares}</span>

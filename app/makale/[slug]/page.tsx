@@ -58,7 +58,7 @@ export async function generateMetadata({ params }: ArticlePageProps) {
       authors: [article.author],
       images: [
         {
-          url: article.image || '/og-image.jpg',
+          url: `https://emirfaruktopal.com/api/og-image/${slug}`,
           width: 1200,
           height: 630,
           alt: article.title,
@@ -69,7 +69,7 @@ export async function generateMetadata({ params }: ArticlePageProps) {
       card: 'summary_large_image',
       title: article.title,
       description: article.excerpt,
-      images: [article.image || '/og-image.jpg'],
+      images: [`/api/og-image/${slug}`],
     },
   }
 }
