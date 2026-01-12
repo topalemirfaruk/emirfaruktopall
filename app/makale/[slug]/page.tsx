@@ -23,6 +23,15 @@ export async function generateMetadata({ params }: ArticlePageProps) {
   const { slug } = await params
   const article = await prisma.article.findUnique({
     where: { slug },
+    select: {
+      title: true,
+      excerpt: true,
+      author: true,
+      date: true,
+      createdAt: true,
+      slug: true,
+      // Exclude 'image' (Base64) to prevent heavy payload/timeouts
+    }
   })
 
   if (!article) {
