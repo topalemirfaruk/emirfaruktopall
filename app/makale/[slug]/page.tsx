@@ -77,8 +77,18 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
 
   // Normalize tags
   const tags = article.tags ? article.tags.split(',') : []
-  // Cast article to any for now to bypass type mismatch with client components until full refactor
-  const uiArticle = { ...article, tags } as any
+
+  // Serialize article for client components to prevent crash relative to Date objects
+  const uiArticle = {
+    ...article,
+    tags,
+    createdAt: article.createdAt.toISOString(),
+    updatedAt: article.updatedAt.toISOString(),
+    comments: article.comments.map((c: any) => ({
+      ...c,
+      createdAt: c.createdAt.toISOString(),
+    }))
+  } as any
 
   return (
     <div className="flex min-h-screen bg-[#0a0f0a]">
