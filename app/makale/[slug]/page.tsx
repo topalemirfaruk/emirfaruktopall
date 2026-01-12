@@ -4,7 +4,7 @@ import { ArrowLeft, Clock, Tag } from "lucide-react"
 import { prisma } from "@/lib/prisma"
 import { Sidebar } from "@/components/sidebar"
 import { ArticleInteractions } from "@/components/article-interactions"
-import { DisqusComments } from "@/components/disqus-comments"
+import { GiscusComments } from "@/components/giscus-comments"
 
 import Script from "next/script"
 import ReactMarkdown from "react-markdown"
