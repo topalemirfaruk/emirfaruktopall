@@ -87,6 +87,10 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
     comments: article.comments.map((c: any) => ({
       ...c,
       createdAt: c.createdAt.toISOString(),
+      replies: c.replies?.map((r: any) => ({
+        ...r,
+        createdAt: r.createdAt.toISOString(),
+      })) || []
     }))
   } as any
 
