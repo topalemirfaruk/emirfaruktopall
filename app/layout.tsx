@@ -7,6 +7,17 @@ import "./globals.css"
 const _geist = Geist({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
 
+import type { Viewport } from "next"
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+  // Also supported but less common
+  // interactiveWidget: 'resizes-visual',
+}
+
 export const metadata: Metadata = {
   metadataBase: new URL('https://emirfaruktopal.com'), // Replace with actual domain
   title: {
