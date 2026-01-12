@@ -4,13 +4,17 @@ import { Trash2 } from "lucide-react"
 import { deleteArticle } from "@/actions/articles"
 import { useTransition } from "react"
 
+import { useRouter } from "next/navigation"
+
 export function DeleteButton({ id }: { id: number }) {
     const [isPending, startTransition] = useTransition()
+    const router = useRouter()
 
     const handleDelete = () => {
         if (confirm("Bu içeriği silmek istediğinize emin misiniz?")) {
             startTransition(async () => {
                 await deleteArticle(id)
+                router.refresh()
             })
         }
     }

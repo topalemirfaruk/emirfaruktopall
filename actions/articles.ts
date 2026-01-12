@@ -70,7 +70,12 @@ export async function updateArticle(id: number, formData: FormData) {
 
 export async function deleteArticle(id: number) {
     await prisma.article.delete({ where: { id } })
+    revalidatePath("/", "layout")
     revalidatePath("/admin/articles")
     revalidatePath("/admin/projects")
-    revalidatePath("/")
+    revalidatePath("/makaleler")
+    revalidatePath("/haberler")
+    revalidatePath("/ogreticiler")
+    revalidatePath("/dagitimlar")
+    revalidatePath("/projelerim")
 }
