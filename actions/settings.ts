@@ -50,8 +50,13 @@ export async function updateSiteSettings(formData: FormData) {
 }
 
 export async function getSiteSettings() {
-    const settings = await prisma.siteConfig.findUnique({
-        where: { id: 1 },
-    })
-    return settings
+    try {
+        const settings = await prisma.siteConfig.findUnique({
+            where: { id: 1 },
+        })
+        return settings
+    } catch (error) {
+        console.error("Failed to fetch site settings:", error)
+        return null
+    }
 }
