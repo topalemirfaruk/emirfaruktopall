@@ -25,7 +25,11 @@ export const metadata: Metadata = {
     template: "%s | Emir Faruk Topal"
   },
   description: "Junior Linux System Administrator. Portfolio, blog, and tutorials on Linux systems and open source technologies.",
-  keywords: ["Linux", "System Administration", "DevOps", "Open Source", "Software Development", "Next.js", "React"],
+  keywords: [
+    "Linux", "Sistem Yönetimi", "System Administration", "DevOps", "Open Source",
+    "Açık Kaynak", "Arch Linux", "Debian", "Ubuntu", "Server Management",
+    "Web Development", "Next.js", "React", "Docker", "Kubernetes", "Bilişim", "Teknoloji Blogu"
+  ],
   authors: [{ name: "Emir Faruk Topal" }],
   creator: "Emir Faruk Topal",
   openGraph: {
