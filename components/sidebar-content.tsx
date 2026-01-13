@@ -38,9 +38,10 @@ export function SidebarContent({ settings }: SidebarContentProps) {
                         href={settings.socialGithub}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-[#6b7280] hover:text-[#22c55e] transition-colors"
+                        aria-label="GitHub Profilim"
+                        className="text-[#9ca3af] hover:text-[#22c55e] transition-colors"
                     >
-                        <Github className="w-4 h-4" />
+                        <Github className="w-5 h-5" />
                     </a>
                 )}
                 {settings?.socialTwitter && (
@@ -48,9 +49,10 @@ export function SidebarContent({ settings }: SidebarContentProps) {
                         href={settings.socialTwitter}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-[#6b7280] hover:text-[#22c55e] transition-colors"
+                        aria-label="X (Twitter) Profilim"
+                        className="text-[#9ca3af] hover:text-[#22c55e] transition-colors"
                     >
-                        <Twitter className="w-4 h-4" />
+                        <Twitter className="w-5 h-5" />
                     </a>
                 )}
                 {settings?.socialLinkedin && (
@@ -58,17 +60,19 @@ export function SidebarContent({ settings }: SidebarContentProps) {
                         href={settings.socialLinkedin}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-[#6b7280] hover:text-[#22c55e] transition-colors"
+                        aria-label="LinkedIn Profilim"
+                        className="text-[#9ca3af] hover:text-[#22c55e] transition-colors"
                     >
-                        <Linkedin className="w-4 h-4" />
+                        <Linkedin className="w-5 h-5" />
                     </a>
                 )}
                 {settings?.socialEmail && (
                     <a
                         href={`mailto:${settings.socialEmail}`}
-                        className="text-[#6b7280] hover:text-[#22c55e] transition-colors"
+                        aria-label="E-posta Gönder"
+                        className="text-[#9ca3af] hover:text-[#22c55e] transition-colors"
                     >
-                        <Mail className="w-4 h-4" />
+                        <Mail className="w-5 h-5" />
                     </a>
                 )}
             </div>
