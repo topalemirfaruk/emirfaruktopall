@@ -177,7 +177,37 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
                 </div>
               </div>
             </div>
-
+            {/* Structured Data (JSON-LD) for SEO */}
+            <Script
+              id="article-json-ld"
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{
+                __html: JSON.stringify({
+                  "@context": "https://schema.org",
+                  "@type": "TechArticle",
+                  headline: article.title,
+                  description: article.excerpt,
+                  image: [
+                    `https://emirfaruktopal.com/api/og-image/${slug}`,
+                  ],
+                  datePublished: article.createdAt ? new Date(article.createdAt).toISOString() : new Date().toISOString(),
+                  dateModified: article.updatedAt ? new Date(article.updatedAt).toISOString() : new Date().toISOString(),
+                  author: [{
+                    "@type": "Person",
+                    name: article.author,
+                    url: "https://emirfaruktopal.com"
+                  }],
+                  publisher: {
+                    "@type": "Organization",
+                    name: "Emir Faruk Topal",
+                    logo: {
+                      "@type": "ImageObject",
+                      url: "https://emirfaruktopal.com/icon.svg"
+                    }
+                  }
+                })
+              }}
+            />
             {/* JSON-LD Structured Data */}
             <Script
               id="article-json-ld"
@@ -231,35 +261,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
                     ) : (
                       <div className="bg-[#0d120d] border border-[#1a2e1a] rounded-lg overflow-hidden my-4">
                         {/* Structured Data (JSON-LD) for SEO */}
-                        <script
-                          type="application/ld+json"
-                          dangerouslySetInnerHTML={{
-                            __html: JSON.stringify({
-                              "@context": "https://schema.org",
-                              "@type": "TechArticle",
-                              headline: article.title,
-                              description: article.excerpt,
-                              image: [
-                                `https://emirfaruktopal.com/api/og-image/${slug}`,
-                              ],
-                              datePublished: article.createdAt ? new Date(article.createdAt).toISOString() : new Date().toISOString(),
-                              dateModified: article.updatedAt ? new Date(article.updatedAt).toISOString() : new Date().toISOString(),
-                              author: [{
-                                "@type": "Person",
-                                name: article.author,
-                                url: "https://emirfaruktopal.com"
-                              }],
-                              publisher: {
-                                "@type": "Organization",
-                                name: "Emir Faruk Topal",
-                                logo: {
-                                  "@type": "ImageObject",
-                                  url: "https://emirfaruktopal.com/icon.svg"
-                                }
-                              }
-                            })
-                          }}
-                        />
+
 
                         <div className="flex items-center px-4 py-2 bg-[#1a2e1a]/50 border-b border-[#1a2e1a]">
                           <div className="flex gap-1.5">
