@@ -228,6 +228,28 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
               }}
             />
 
+            {/* Google Reader Revenue Manager (SwG) */}
+            <Script
+              id="swg-basic-init"
+              strategy="afterInteractive"
+              dangerouslySetInnerHTML={{
+                __html: `
+                  (self.SWG_BASIC = self.SWG_BASIC || []).push( basicSubscriptions => {
+                    basicSubscriptions.init({
+                      type: "NewsArticle",
+                      isPartOfType: ["Product"],
+                      isPartOfProductId: "CAowj96iDA:openaccess",
+                      clientOptions: { theme: "light", lang: "tr" },
+                    });
+                  });
+                `
+              }}
+            />
+            <Script
+              src="https://news.google.com/swg/js/v1/swg-basic.js"
+              strategy="afterInteractive"
+            />
+
             {/* Interactions */}
             <ArticleInteractions article={uiArticle} />
           </div>
