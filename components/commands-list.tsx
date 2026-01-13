@@ -10,6 +10,7 @@ export function CommandsList() {
     const [search, setSearch] = useState("")
     const [copiedId, setCopiedId] = useState<number | null>(null)
     const [selectedCategory, setSelectedCategory] = useState("Tümü")
+    const [activeTerminal, setActiveTerminal] = useState<{ command: string; output: string } | null>(null)
 
     const categories = ["Tümü", ...new Set(commands.map((c) => c.category))]
 
@@ -26,9 +27,6 @@ export function CommandsList() {
         setCopiedId(id)
         setTimeout(() => setCopiedId(null), 2000)
     }
-
-    return (
-    const [activeTerminal, setActiveTerminal] = useState<{ command: string; output: string } | null>(null)
 
     return (
         <div className="flex-1 overflow-y-auto p-8">
