@@ -4,6 +4,7 @@ import type React from "react"
 
 import { useState } from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { Heart, MessageCircle, Share2, Bookmark, Clock } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { ShareModal } from "./share-modal"
@@ -43,7 +44,7 @@ export function ArticleCard({ article }: { article: Article }) {
     <>
       <article className="bg-[#0d120d] rounded-lg overflow-hidden border border-[#1a2e1a] hover:border-[#22c55e]/50 transition-colors group">
         {/* Image - Clickable */}
-        import Image from "next/image"
+
 
         // ... inside ArticleCard ...
 
