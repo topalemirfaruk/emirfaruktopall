@@ -13,7 +13,10 @@ const isPublicRoute = createRouteMatcher([
     '/hakkimizda(.*)',
     '/sign-in(.*)',
     '/sign-up(.*)',
-    '/api/og-image(.*)' // Open for social media crawlers
+    '/sign-up(.*)',
+    '/api/og-image(.*)', // Open for social media crawlers
+    '/sitemap.xml',
+    '/robots.txt'
 ])
 
 export default clerkMiddleware(async (auth, request) => {
