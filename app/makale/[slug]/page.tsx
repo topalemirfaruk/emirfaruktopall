@@ -239,7 +239,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
                       type: "NewsArticle",
                       isPartOfType: ["Product"],
                       isPartOfProductId: "CAowj96iDA:openaccess",
-                      clientOptions: { theme: "light", lang: "tr" },
+                      clientOptions: { theme: "dark", lang: "tr" },
                     });
                   });
                 `
