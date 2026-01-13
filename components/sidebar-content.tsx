@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Github, Twitter, MessageCircle, Linkedin, Mail } from "lucide-react"
+import { Github, Twitter, MessageCircle, Linkedin, Mail, Newspaper } from "lucide-react"
 import { SidebarNav } from "./sidebar-nav"
 
 interface SidebarContentProps {
@@ -75,6 +75,16 @@ export function SidebarContent({ settings }: SidebarContentProps) {
                         <Mail className="w-5 h-5" />
                     </a>
                 )}
+                {/* Google News - Hardcoded */}
+                <a
+                    href="https://news.google.com/publications/CAAqLggKIihDQklTR0FnTWFoUUtFbVZ0YVhKbVlYSjFhM1J2Y0dGc0xtTnZiU2dBUAE?ceid=TR:tr&oc=3"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Google News"
+                    className="text-[#9ca3af] hover:text-[#22c55e] transition-colors"
+                >
+                    <Newspaper className="w-5 h-5" />
+                </a>
             </div>
         </div>
     )
