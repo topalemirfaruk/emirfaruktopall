@@ -83,6 +83,10 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
+  verification: {
+    yandex: "eee96c1a1eba2b1b",
+    google: "google-site-verification-code", // Optional: if you have one
+  },
 }
 
 import { ClerkProvider } from "@clerk/nextjs"
