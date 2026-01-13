@@ -17,6 +17,7 @@ const isPublicRoute = createRouteMatcher([
     '/api/og-image(.*)', // Open for social media crawlers
     '/sitemap.xml',
     '/robots.txt',
+    '/rss.xml',
     '/gizlilik-politikasi',
     '/hizmet-sartlari'
 ])
