@@ -5,6 +5,7 @@ import { prisma } from "@/lib/prisma"
 import { Sidebar } from "@/components/sidebar"
 import { ArticleInteractions } from "@/components/article-interactions"
 import { GiscusComments } from "@/components/giscus-comments"
+import { NewsletterCTA } from "@/components/newsletter-cta"
 
 import Script from "next/script"
 import ReactMarkdown from "react-markdown"
@@ -329,6 +330,10 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
           </div>
 
           {/* Comments */}
+
+          {/* Newsletter CTA */}
+          <NewsletterCTA />
+
           {/* Comments */}
           <GiscusComments />
         </div>
