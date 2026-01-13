@@ -43,11 +43,15 @@ export function ArticleCard({ article }: { article: Article }) {
       <article className="bg-[#0d120d] rounded-lg overflow-hidden border border-[#1a2e1a] hover:border-[#22c55e]/50 transition-colors group">
         {/* Image - Clickable */}
         <Link href={linkHref} target={linkTarget}>
+          const [imageError, setImageError] = useState(false)
+
+          // ... (inside component)
+
           <div className="relative aspect-video w-full overflow-hidden">
             <img
-              src={article.image || "/placeholder.svg"}
+              src={imageError || !article.image ? "/placeholder.svg" : article.image}
               alt={article.title}
-              onError={(e) => (e.currentTarget.src = "/placeholder.svg")}
+              onError={() => setImageError(true)}
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
             />
             <div className="absolute bottom-3 left-3">
