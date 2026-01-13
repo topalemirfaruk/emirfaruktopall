@@ -470,6 +470,7 @@ export const commands = [
     usage: "ls [SEÇENEKLER] [DOSYA]",
     examples: ["ls -la", "ls -lh /var/log", "ls --color=auto"],
     category: "Dosya İşlemleri",
+    output: "total 48\ndrwxr-xr-x 8 user user 4096 Jan 12 14:30 .\ndrwxr-xr-x 3 user user 4096 Jan 12 14:30 ..\n-rw-r--r-- 1 user user  220 Jan 12 14:30 .bash_logout\n-rw-r--r-- 1 user user 3771 Jan 12 14:30 .bashrc\n-rw-r--r-- 1 user user  807 Jan 12 14:30 .profile\n-rw-r--r-- 1 user user    0 Jan 13 18:00 notlar.txt\ndrwxr-xr-x 2 user user 4096 Jan 13 18:00 .config\ndrwxr-xr-x 2 user user 4096 Jan 13 18:00 Desktop",
   },
   {
     id: 2,

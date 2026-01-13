@@ -4,6 +4,7 @@ import { useState } from "react"
 import { Search, Copy, Check, Terminal } from "lucide-react"
 import { commands } from "@/lib/data"
 import { cn } from "@/lib/utils"
+import { TerminalSimulator } from "./terminal-simulator"
 
 export function CommandsList() {
     const [search, setSearch] = useState("")
@@ -25,6 +26,9 @@ export function CommandsList() {
         setCopiedId(id)
         setTimeout(() => setCopiedId(null), 2000)
     }
+
+    return (
+    const [activeTerminal, setActiveTerminal] = useState<{ command: string; output: string } | null>(null)
 
     return (
         <div className="flex-1 overflow-y-auto p-8">
@@ -83,6 +87,17 @@ export function CommandsList() {
                                     {cmd.category}
                                 </span>
                             </div>
+
+                            {/* Try It Button */}
+                            {cmd.output && (
+                                <button
+                                    onClick={() => setActiveTerminal({ command: cmd.name, output: cmd.output! })}
+                                    className="flex items-center gap-1.5 px-3 py-1.5 bg-[#22c55e]/10 text-[#22c55e] text-xs font-semibold rounded hover:bg-[#22c55e] hover:text-black transition-colors"
+                                >
+                                    <Terminal className="w-3 h-3" />
+                                    Dene
+                                </button>
+                            )}
                         </div>
 
                         <p className="text-[#b0b0b0] text-sm mb-4">{cmd.description}</p>
@@ -115,6 +130,16 @@ export function CommandsList() {
                     </div>
                 ))}
             </div>
+
+            {/* Terminal Modal */}
+            {activeTerminal && (
+                <TerminalSimulator
+                    isOpen={!!activeTerminal}
+                    onClose={() => setActiveTerminal(null)}
+                    command={activeTerminal.command}
+                    output={activeTerminal.output}
+                />
+            )}
         </div>
     )
 }
