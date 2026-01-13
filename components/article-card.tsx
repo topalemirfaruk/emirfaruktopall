@@ -58,6 +58,7 @@ export function ArticleCard({ article }: { article: Article }) {
             </div>
             <button
               onClick={handleBookmark}
+              aria-label={bookmarked ? "Yer işaretlerinden kaldır" : "Yer işaretlerine ekle"}
               className="absolute top-3 right-3 p-2 bg-black/50 rounded-full hover:bg-black/70 transition-colors"
             >
               <Bookmark className={cn("w-4 h-4", bookmarked ? "fill-[#22c55e] text-[#22c55e]" : "text-white")} />
@@ -98,6 +99,7 @@ export function ArticleCard({ article }: { article: Article }) {
           <div className="flex items-center justify-between pt-3 border-t border-[#1a2e1a]">
             <button
               onClick={handleLike}
+              aria-label={liked ? "Beğenmekten vazgeç" : "Beğen"}
               className={cn(
                 "flex items-center gap-2 text-sm transition-all px-3 py-1.5 rounded-full hover:bg-[#1a2e1a]",
                 liked ? "text-[#22c55e] bg-[#22c55e]/10" : "text-[#a1a1aa] hover:text-[#22c55e]",
@@ -109,6 +111,7 @@ export function ArticleCard({ article }: { article: Article }) {
 
             <Link
               href={`/makale/${article.slug}#yorumlar`}
+              aria-label="Yorumlara git"
               className="flex items-center gap-2 text-[#a1a1aa] hover:text-[#22c55e] text-sm transition-all px-3 py-1.5 rounded-full hover:bg-[#1a2e1a]"
             >
               <MessageCircle className="w-4 h-4" />
@@ -117,6 +120,7 @@ export function ArticleCard({ article }: { article: Article }) {
 
             <button
               onClick={handleShare}
+              aria-label="Paylaş"
               className="flex items-center gap-2 text-[#a1a1aa] hover:text-[#22c55e] text-sm transition-all px-3 py-1.5 rounded-full hover:bg-[#1a2e1a]"
             >
               <Share2 className="w-4 h-4" />

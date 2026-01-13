@@ -44,7 +44,7 @@ export function SidebarNav() {
                         "w-full flex items-center gap-3 px-3 py-2.5 rounded text-left transition-colors",
                         isActive(item.href)
                             ? "bg-[#22c55e] text-black font-medium"
-                            : "text-[#6b7280] hover:text-[#22c55e] hover:bg-[#0d120d]",
+                            : "text-[#9ca3af] hover:text-[#22c55e] hover:bg-[#0d120d]",
                     )}
                 >
                     <item.icon className="w-4 h-4" />
