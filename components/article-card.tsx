@@ -43,15 +43,22 @@ export function ArticleCard({ article }: { article: Article }) {
     <>
       <article className="bg-[#0d120d] rounded-lg overflow-hidden border border-[#1a2e1a] hover:border-[#22c55e]/50 transition-colors group">
         {/* Image - Clickable */}
+        import Image from "next/image"
+
+        // ... inside ArticleCard ...
+
+        {/* Image - Clickable */}
         <Link href={linkHref} target={linkTarget}>
           <div className="relative aspect-video w-full overflow-hidden">
-            <img
+            <Image
               src={imageError || !article.image ? "/placeholder.svg" : article.image}
               alt={article.title}
+              fill
+              className="object-cover group-hover:scale-105 transition-transform duration-300"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               onError={() => setImageError(true)}
-              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
             />
-            <div className="absolute bottom-3 left-3">
+            <div className="absolute bottom-3 left-3 z-10">
               <span className="px-2 py-1 bg-[#22c55e] text-black text-xs font-semibold rounded">
                 {article.category}
               </span>
@@ -59,7 +66,7 @@ export function ArticleCard({ article }: { article: Article }) {
             <button
               onClick={handleBookmark}
               aria-label={bookmarked ? "Yer işaretlerinden kaldır" : "Yer işaretlerine ekle"}
-              className="absolute top-3 right-3 p-2 bg-black/50 rounded-full hover:bg-black/70 transition-colors"
+              className="absolute top-3 right-3 p-2 bg-black/50 rounded-full hover:bg-black/70 transition-colors z-10"
             >
               <Bookmark className={cn("w-4 h-4", bookmarked ? "fill-[#22c55e] text-[#22c55e]" : "text-white")} />
             </button>
