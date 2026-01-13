@@ -16,7 +16,9 @@ const isPublicRoute = createRouteMatcher([
     '/sign-up(.*)',
     '/api/og-image(.*)', // Open for social media crawlers
     '/sitemap.xml',
-    '/robots.txt'
+    '/robots.txt',
+    '/gizlilik-politikasi',
+    '/hizmet-sartlari'
 ])
 
 export default clerkMiddleware(async (auth, request) => {
