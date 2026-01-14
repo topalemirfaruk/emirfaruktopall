@@ -15,6 +15,11 @@ const PLAYLIST = [
         title: "Dönence",
         artist: "Barış Manço",
         src: "https://mp3indirdur.life/Baris-Manco-Donence-13534?dinle=1"
+    },
+    {
+        title: "Islak Islak",
+        artist: "Cem Karaca",
+        src: "https://mp3indirdur.life/Cem-Karaca-Islak-Islak-91940?dinle=1"
     }
 ]
 
