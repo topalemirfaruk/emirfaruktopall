@@ -100,7 +100,7 @@ Linux sistem yöneticileri için değişim zamanı! Linux 6.17 serisi yaşam dö
 ## Docker: "Hardened" İmajlar Artık Herkese Açık
 **19 Aralık 2025**
 
-<img src="${optimizeImage("https://images.unsplash.com/photo-1494412574643-35d324698420")}" alt="Konteyner ve Nakliye" class="w-full h-80 object-cover rounded-xl shadow-md my-4 border border-[#22c55e]/20" />
+<img src="${optimizeImage("https://images.unsplash.com/photo-1494412574643-35d324698420")}" alt="Konteyner ve Nakliye" class="w-full h-64 object-cover rounded-xl shadow-md my-4 border border-[#22c55e]/20" />
 
 Konteyner dünyasında güvenlik standartları değişiyor. Docker, daha önce sadece ücretli kurumsal abonelerine sunduğu **"Güçlendirilmiş İmajlar" (Hardened Images)** kütüphanesini **Apache 2.0 Lisansı** ile herkesin kullanımına açtı.
 
