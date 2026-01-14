@@ -5,7 +5,6 @@ export default async function HakkimizdaPage() {
   const settings = await getSiteSettings()
 
   return (
-  return (
     <div className="p-8">
       <div className="max-w-3xl mx-auto">
         <div className="flex items-center gap-4 mb-8">

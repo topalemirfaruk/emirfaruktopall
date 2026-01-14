@@ -118,7 +118,6 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
   } as any
 
   return (
-  return (
     <>
       {/* Header Image */}
       <div className="relative w-full h-[400px] md:h-[500px] bg-[#0a0f0a] overflow-hidden group">
