@@ -7,14 +7,9 @@ import { cn } from "@/lib/utils"
 // Copyright free Lofi beats placeholder
 const PLAYLIST = [
     {
-        title: "Coding Night",
-        artist: "Lofi Study",
-        src: "https://files.freemusicarchive.org/storage-freemusicarchive-org/music/no_curator/Tours/Enthusiast/Tours_-_01_-_Enthusiast.mp3"
-    },
-    {
-        title: "Linux Kernel Compilation",
-        artist: "Synthwave Boy",
-        src: "https://files.freemusicarchive.org/storage-freemusicarchive-org/music/no_curator/Tours/Enthusiast/Tours_-_01_-_Enthusiast.mp3" // Placeholder, duplicate for demo
+        title: "Tükeneceğiz",
+        artist: "Sezen Aksu",
+        src: "https://mp3indirdur.life/Sezen-Aksu-Tukenecegiz-77920?dinle=1"
     }
 ]
 
