@@ -1,6 +1,7 @@
 import Link from "next/link"
 import { Github, Twitter, MessageCircle, Linkedin, Mail, Newspaper } from "lucide-react"
 import { SidebarNav } from "./sidebar-nav"
+import { MusicPlayer } from "./music-player"
 
 interface SidebarContentProps {
     settings: any // Replace with proper type if available, using any for now to match current usage
@@ -31,8 +32,14 @@ export function SidebarContent({ settings }: SidebarContentProps) {
             {/* Navigation (Client Component) */}
             <SidebarNav />
 
+
+            {/* Music Player */}
+            <div className="mt-auto">
+                <MusicPlayer variant="sidebar" />
+            </div>
+
             {/* Social Links */}
-            <div className="p-5 border-t border-[#1a2e1a] flex gap-4 overflow-x-auto mt-auto">
+            <div className="p-5 border-t border-[#1a2e1a] flex gap-4 overflow-x-auto">
                 {settings?.socialGithub && (
                     <a
                         href={settings.socialGithub}

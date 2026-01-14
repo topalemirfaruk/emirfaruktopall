@@ -3,7 +3,7 @@ import type { Metadata } from "next"
 import { Geist, Geist_Mono } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
-import { MusicPlayer } from "@/components/music-player"
+import { Sidebar } from "@/components/sidebar"
 
 const _geist = Geist({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
@@ -101,8 +101,12 @@ export default function RootLayout({
     <ClerkProvider>
       <html lang="tr">
         <body className={`font-sans antialiased`}>
-          {children}
-          <MusicPlayer />
+          <div className="flex min-h-screen bg-[#0a0f0a]">
+            <Sidebar />
+            <main className="flex-1 overflow-y-auto">
+              {children}
+            </main>
+          </div>
           <Analytics />
         </body>
       </html>

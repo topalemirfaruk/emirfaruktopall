@@ -28,10 +28,14 @@ const PLAYLIST = [
     }
 ]
 
-export function MusicPlayer() {
+interface MusicPlayerProps {
+    variant?: "floating" | "sidebar"
+}
+
+export function MusicPlayer({ variant = "floating" }: MusicPlayerProps) {
     const [isPlaying, setIsPlaying] = useState(false)
     const [currentTrackIndex, setCurrentTrackIndex] = useState(0)
-    const [isMinimized, setIsMinimized] = useState(true) // Default minimized to not annoy users
+    const [isMinimized, setIsMinimized] = useState(variant === "floating") // Default minimized only for floating
     const [volume, setVolume] = useState(0.5)
     const [isMuted, setIsMuted] = useState(false)
 
@@ -71,6 +75,68 @@ export function MusicPlayer() {
             setTimeout(() => audioRef.current?.play(), 100)
         }
     }, [currentTrackIndex])
+
+    if (variant === "sidebar") {
+        return (
+            <div className="px-4 pb-4">
+                <audio
+                    ref={audioRef}
+                    src={PLAYLIST[currentTrackIndex].src}
+                    onEnded={playNext}
+                />
+                <div className="bg-[#0d120d] border border-[#22c55e]/30 rounded-xl p-3 shadow-lg">
+                    {/* Header */}
+                    <div className="flex items-center gap-2 text-[#22c55e] mb-2 px-1">
+                        <Music className="w-3 h-3" />
+                        <span className="text-[10px] font-mono font-bold tracking-wider">MUSIC_PLAYER</span>
+                    </div>
+
+                    {/* Track Info */}
+                    <div className="mb-3 text-center overflow-hidden">
+                        <div className="whitespace-nowrap animate-marquee">
+                            <h3 className="text-white font-bold text-xs inline-block">{PLAYLIST[currentTrackIndex].title}</h3>
+                            <span className="text-[#6b7280] text-[10px] mx-2">-</span>
+                            <p className="text-[#6b7280] text-[10px] inline-block">{PLAYLIST[currentTrackIndex].artist}</p>
+                        </div>
+                    </div>
+
+                    {/* Controls */}
+                    <div className="flex items-center justify-center gap-3 mb-3">
+                        <button onClick={playPrev} className="text-[#9ca3af] hover:text-[#22c55e] transition-colors">
+                            <SkipBack className="w-4 h-4" />
+                        </button>
+
+                        <button
+                            onClick={togglePlay}
+                            className="w-8 h-8 bg-[#22c55e] rounded-full flex items-center justify-center text-black hover:bg-[#4ade80] transition-colors shadow-lg shadow-[#22c55e]/20"
+                        >
+                            {isPlaying ? <Pause className="w-4 h-4 fill-current" /> : <Play className="w-4 h-4 fill-current ml-1" />}
+                        </button>
+
+                        <button onClick={playNext} className="text-[#9ca3af] hover:text-[#22c55e] transition-colors">
+                            <SkipForward className="w-4 h-4" />
+                        </button>
+                    </div>
+
+                    {/* Volume */}
+                    <div className="flex items-center gap-2 px-1">
+                        <button onClick={() => setIsMuted(!isMuted)} className="text-[#6b7280] hover:text-white">
+                            {isMuted ? <VolumeX className="w-3 h-3" /> : <Volume2 className="w-3 h-3" />}
+                        </button>
+                        <input
+                            type="range"
+                            min="0"
+                            max="1"
+                            step="0.01"
+                            value={isMuted ? 0 : volume}
+                            onChange={(e) => setVolume(parseFloat(e.target.value))}
+                            className="w-full h-1 bg-[#1a2e1a] rounded-lg appearance-none cursor-pointer [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-2 [&::-webkit-slider-thumb]:h-2 [&::-webkit-slider-thumb]:bg-[#22c55e] [&::-webkit-slider-thumb]:rounded-full"
+                        />
+                    </div>
+                </div>
+            </div>
+        )
+    }
 
     return (
         <div className={cn(
