@@ -9,8 +9,6 @@ async function main() {
         update: {
             title: "2025 Yıllığı: Açık Kaynak Dünyasında Neler Oldu?",
             content: `
-# 2025: Açık Kaynak Dünyasının Altın Yılı
-
 2025 yılı, açık kaynak ekosistemi için devrim niteliğinde gelişmelerin yaşandığı, yapay zekanın demokratikleştiği ve Linux masaüstünün hiç olmadığı kadar güçlendiği bir yıl oldu. İşte ay ay yaşanan en önemli gelişmeler, kaynaklar ve görsellerle 2025 panoraması.
 
 ## 📅 15 Ocak 2025: Linux Kernel 6.13 ve Rust Devrimi
@@ -100,8 +98,6 @@ Yılın son sürprizi donanım dünyasından geldi. **RISC-V** mimarili ilk yük
         slug: "2025-acik-kaynak-dunyasi-ozeti",
         excerpt: "Linux Kernel 6.13, Llama 4, SteamOS 4.0 ve daha fazlası. 2025 yılında açık kaynak dünyasının ay ay detaylı dökümü.",
         content: `
-# 2025: Açık Kaynak Dünyasının Altın Yılı
-
 2025 yılı, açık kaynak ekosistemi için devrim niteliğinde gelişmelerin yaşandığı, yapay zekanın demokratikleştiği ve Linux masaüstünün hiç olmadığı kadar güçlendiği bir yıl oldu. İşte ay ay yaşanan en önemli gelişmeler, kaynaklar ve görsellerle 2025 panoraması.
 
 ---
