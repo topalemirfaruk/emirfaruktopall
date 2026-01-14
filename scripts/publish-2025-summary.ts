@@ -10,13 +10,10 @@ async function main() {
         slug: "2025-acik-kaynak-dunyasi-ozeti",
         excerpt: "2025'in finalinde Avrupa'nın dijital egemenlik hamleleri, Red Hat'in yapay zeka güvenliği yatırımı ve Linux dünyasındaki kritik LTS geçişleri gündeme damgasını vurdu.",
         content: `
-# Aralık 2025: Dijital Egemenlik ve Açık Kaynak Devrimi
 
 2025 yılını geride bırakırken, Aralık ayı açık kaynak dünyası için sadece bir takvim yaprağı değil, stratejik kararların ve teknolojik sıçramaların ayı oldu. Özellikle Avrupa kamu kurumlarının **"Vendor Lock-in" (Tedarikçi Kilidi)** endişesiyle başlattığı devrim niteliğindeki geçiş planları ve yapay zeka güvenliğindeki açık kaynak hamleleri, 2026'nın nasıl geçeceğinin sinyallerini veriyor.
 
 İşte editörün seçimiyle, Aralık ayının en çarpıcı gelişmeleri ve detaylı analizleri.
-
-
 
 ## Avrupa'dan Bulut Devlerine "Gizlilik" Uyarısı
 **2 Aralık 2025 | İsviçre**
