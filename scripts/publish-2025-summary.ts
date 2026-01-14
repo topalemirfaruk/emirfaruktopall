@@ -18,8 +18,8 @@ async function main() {
 
 <br><br>
 
-## 🛡️ Avrupa'dan Bulut Devlerine "Gizlilik" Uyarısı
-**📅 2 Aralık 2025 | İsviçre**
+## Avrupa'dan Bulut Devlerine "Gizlilik" Uyarısı
+**2 Aralık 2025 | İsviçre**
 
 Veri gizliliği konusunda dünyanın en katı standartlarına sahip ülkelerinden biri olan **İsviçre**, veri koruma otoriteleri aracılığıyla kritik bir uyarı yayınladı. Kamu kurumlarının, hassas vatandaş verilerini uluslararası bulut sağlayıcılarına (Hyperscalers) emanet etmesinin **büyük risk** taşıdığı vurgulandı.
 
@@ -31,8 +31,8 @@ Raporda, özellikle **Microsoft 365** gibi yaygın SaaS çözümlerinin, İsviç
 
 <br><br>
 
-## 💶 Almanya'dan Açık Kaynak ile Dev Tasarruf: 15 Milyon €
-**📅 8 Aralık 2025 | Schleswig-Holstein, Almanya**
+## Almanya'dan Açık Kaynak ile Dev Tasarruf: 15 Milyon €
+**8 Aralık 2025 | Schleswig-Holstein, Almanya**
 
 Almanya'nın Schleswig-Holstein eyaleti, "Kamu Parası Kamu Koduna" (*Public Money, Public Code*) prensibini hayata geçiriyor. Eyalet yönetimi, 2026 mali yılı itibarıyla Microsoft lisanslarından tamamen çıkarak **LibreOffice** ve **Linux** tabanlı sistemlere geçiş sayesinde yıllık **15 Milyon Euro** tasarruf hedeflediklerini açıkladı.
 
@@ -42,8 +42,8 @@ Bu sadece bir mali tasarruf değil; aynı zamanda dijital bağımsızlık ilanı
 
 <br><br>
 
-## 🤖 Red Hat’ten Yapay Zeka Güvenliği Hamlesi: Chatterbox Labs
-**📅 16 Aralık 2025**
+## Red Hat’ten Yapay Zeka Güvenliği Hamlesi: Chatterbox Labs
+**16 Aralık 2025**
 
 Kurumsal Linux pazarının lideri **Red Hat**, yapay zeka güvenliği (AI Safety) alanında uzmanlaşmış **Chatterbox Labs**'i satın alarak portföyünü güçlendirdi.
 
@@ -53,8 +53,8 @@ Red Hat'in bu hamlesi, özellikle LLM (Büyük Dil Modelleri) kullanımı sıras
 
 <br><br>
 
-## 🏛️ Danimarka Microsoft Bağımlılığına "Dur" Diyor
-**📅 18 Aralık 2025 | Kopenhag**
+## Danimarka Microsoft Bağımlılığına "Dur" Diyor
+**18 Aralık 2025 | Kopenhag**
 
 Danimarka Karayolu Trafik Otoritesi (*Færdselsstyrelsen*), kamu bilişim altyapısında Microsoft ekosistemine olan bağımlılığı azaltmak için düğmeye bastı. **SIA Open** projesi kapsamında başlatılan pilot uygulama, kamu dairelerinin tescilli yazılımlar yerine, birlikte çalışabilirliği (interoperability) yüksek açık kaynak çözümlere geçişini test ediyor.
 
@@ -62,8 +62,8 @@ Danimarka Karayolu Trafik Otoritesi (*Færdselsstyrelsen*), kamu bilişim altyap
 
 <br><br>
 
-## 🐧 Çekirdek Güncellemesi: Linux 6.18 LTS Sahneye Çıktı
-**📅 18 Aralık 2025**
+## Çekirdek Güncellemesi: Linux 6.18 LTS Sahneye Çıktı
+**18 Aralık 2025**
 
 Linux sistem yöneticileri için değişim zamanı! Linux 6.17 serisi yaşam döngüsünü tamamlarken, **Linux 6.18** resmen **LTS (Uzun Süreli Destek)** statüsü kazandı.
 
@@ -76,8 +76,8 @@ Linux sistem yöneticileri için değişim zamanı! Linux 6.17 serisi yaşam dö
 
 <br><br>
 
-## 📦 Docker: "Hardened" İmajlar Artık Herkese Açık
-**📅 19 Aralık 2025**
+## Docker: "Hardened" İmajlar Artık Herkese Açık
+**19 Aralık 2025**
 
 Konteyner dünyasında güvenlik standartları değişiyor. Docker, daha önce sadece ücretli kurumsal abonelerine sunduğu **"Güçlendirilmiş İmajlar" (Hardened Images)** kütüphanesini **Apache 2.0 Lisansı** ile herkesin kullanımına açtı.
 
@@ -87,8 +87,8 @@ Bu, artık bireysel geliştiricilerin ve küçük start-up'ların da bankacılı
 
 <br><br>
 
-## 🔎 PostgreSQL'de Yapay Zeka Devrimi: BM25 Algoritması
-**📅 22 Aralık 2025**
+## PostgreSQL'de Yapay Zeka Devrimi: BM25 Algoritması
+**22 Aralık 2025**
 
 Vektör veritabanı savaşlarında PostgreSQL vites artırıyor. Tiger Data (eski adıyla Timescale), **pg_textsearch** eklentisi ile **BM25 (Best Matching 25)** algoritmasını PostgreSQL'e entegre etti.
 
