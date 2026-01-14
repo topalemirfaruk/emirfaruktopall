@@ -15,6 +15,9 @@ import rehypeHighlight from "rehype-highlight"
 import "highlight.js/styles/github-dark.css" // Keep this if it resolves, otherwise we might need next/font or global css, but let's try.
 import "@/styles/highlight.css"
 
+export const dynamic = 'force-dynamic'
+
+
 
 interface ArticlePageProps {
   params: Promise<{ slug: string }>
