@@ -10,6 +10,7 @@ const isPublicRoute = createRouteMatcher([
     '/projelerim',
     '/dagitimlar(.*)',
     '/topluluk(.*)',
+    '/acik-kaynak(.*)',
     '/hakkimizda(.*)',
     '/sign-in(.*)',
     '/sign-up(.*)',
