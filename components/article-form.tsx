@@ -55,6 +55,7 @@ export function ArticleForm({ article, defaultCategory }: ArticleFormProps) {
                         <option value="Öğreticiler">Öğreticiler</option>
                         <option value="Haberler">Haberler</option>
                         <option value="Dağıtımlar">Dağıtımlar</option>
+                        <option value="Açık Kaynak">Açık Kaynak</option>
                     </select>
                 </div>
 

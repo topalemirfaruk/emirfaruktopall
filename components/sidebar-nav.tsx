@@ -13,6 +13,7 @@ import {
     Users,
     Info,
     Folder,
+    Globe,
 } from "lucide-react"
 
 const menuItems = [
@@ -23,6 +24,7 @@ const menuItems = [
     { icon: Terminal, label: "Komut Rehberi", href: "/komutlar" },
     { icon: Download, label: "Dağıtımlar", href: "/dagitimlar" },
     { icon: Folder, label: "Projelerim", href: "/projelerim" },
+    { icon: Globe, label: "Açık Kaynak Dünyası", href: "/acik-kaynak" },
     { icon: Info, label: "Hakkımızda", href: "/hakkimizda" },
 ]
 
