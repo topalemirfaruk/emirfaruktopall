@@ -16,8 +16,6 @@ async function main() {
 
 İşte editörün seçimiyle, Aralık ayının en çarpıcı gelişmeleri ve detaylı analizleri.
 
----
-
 ## 🛡️ Avrupa'dan Bulut Devlerine "Gizlilik" Uyarısı
 **📅 2 Aralık 2025 | İsviçre**
 
@@ -85,7 +83,6 @@ Vektör veritabanı savaşlarında PostgreSQL vites artırıyor. Tiger Data (esk
 
 🔗 [Teknik İnceleme](https://lnkd.in/dsQYYdph)
 
----
 
 *2025, açık kaynağın "alternatif" olmaktan çıkıp "standart" haline geldiği yıl olarak tarihe geçti. 2026'da bu ivmenin artarak devam etmesini bekliyoruz. Açık kalın!*
 `,
