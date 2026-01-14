@@ -15,7 +15,6 @@ export default async function OgreticilerPage() {
   }))
 
   return (
-  return (
     <div className="p-8">
       <div className="flex items-center gap-4 mb-8">
         <FileText className="w-6 h-6 text-[#22c55e]" />

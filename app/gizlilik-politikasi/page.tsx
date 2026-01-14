@@ -1,7 +1,6 @@
 
 export default function PrivacyPolicy() {
     return (
-    return (
         <div className="p-8 md:p-12">
             <h1 className="text-3xl font-bold text-white mb-6">Gizlilik Politikası</h1>
             <div className="prose prose-invert max-w-3xl text-[#b0b0b0]">

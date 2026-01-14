@@ -16,7 +16,6 @@ export default async function DagitimlarPage() {
   }))
 
   return (
-  return (
     <div className="p-8">
       <div className="flex items-center gap-4 mb-8">
         <FileText className="w-6 h-6 text-[#22c55e]" />

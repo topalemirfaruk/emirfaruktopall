@@ -16,7 +16,6 @@ export default async function MakalelerPage() {
   }))
 
   return (
-  return (
     <div className="p-8">
       <div className="flex items-center gap-4 mb-8">
         <FileText className="w-8 h-8 text-[#22c55e]" />

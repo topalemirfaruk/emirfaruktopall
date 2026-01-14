@@ -38,7 +38,6 @@ export default async function TagPage({ params }: TagPageProps) {
     }))
 
     return (
-    return (
         <div className="p-8">
             <div className="flex items-center gap-4 mb-8">
                 <Hash className="w-8 h-8 text-[#22c55e]" />
