@@ -20,6 +20,11 @@ const PLAYLIST = [
         title: "Islak Islak",
         artist: "Cem Karaca",
         src: "https://mp3indirdur.life/Cem-Karaca-Islak-Islak-91940?dinle=1"
+    },
+    {
+        title: "Nilüfer",
+        artist: "Müslüm Gürses",
+        src: "https://mp3indirdur.life/Muslum-Gurses-Nilufer-96826?dinle=1"
     }
 ]
 
