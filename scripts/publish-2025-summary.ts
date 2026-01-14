@@ -27,7 +27,7 @@ async function main() {
 **2 Aralık 2025 | İsviçre**
 
 <div class="flex justify-center my-6">
-  <img src="${optimizeImage("https://itsfoss.com/content/images/2025/12/swiss-data-protection-group-resolution.png")}" alt="Veri Gizliliği ve Bulut" class="w-full max-w-lg aspect-video object-cover rounded-xl shadow-md border border-[#22c55e]/20" />
+  <img src="${optimizeImage("https://itsfoss.com/content/images/2025/12/swiss-data-protection-group-resolution.png")}" alt="Veri Gizliliği ve Bulut" class="w-full max-w-md aspect-video object-cover rounded-xl shadow-md border border-[#22c55e]/20" />
 </div>
 
 Veri gizliliği konusunda dünyanın en katı standartlarına sahip ülkelerinden biri olan **İsviçre**, veri koruma otoriteleri aracılığıyla kritik bir uyarı yayınladı. Kamu kurumlarının, hassas vatandaş verilerini uluslararası bulut sağlayıcılarına (Hyperscalers) emanet etmesinin **büyük risk** taşıdığı vurgulandı.
@@ -45,7 +45,7 @@ Raporda, özellikle **Microsoft 365** gibi yaygın SaaS çözümlerinin, İsviç
 **8 Aralık 2025 | Schleswig-Holstein, Almanya**
 
 <div class="flex justify-center my-6">
-  <img src="${optimizeImage("https://itsfoss.com/content/images/2025/12/german-state-boots-microsoft.png")}" alt="Almanya Bayrağı ve Teknoloji" class="w-full max-w-lg aspect-video object-cover rounded-xl shadow-md border border-[#22c55e]/20" />
+  <img src="${optimizeImage("https://itsfoss.com/content/images/2025/12/german-state-boots-microsoft.png")}" alt="Almanya Bayrağı ve Teknoloji" class="w-full max-w-md aspect-video object-cover rounded-xl shadow-md border border-[#22c55e]/20" />
 </div>
 
 Almanya'nın Schleswig-Holstein eyaleti, "Kamu Parası Kamu Koduna" (*Public Money, Public Code*) prensibini hayata geçiriyor. Eyalet yönetimi, 2026 mali yılı itibarıyla Microsoft lisanslarından tamamen çıkarak **LibreOffice** ve **Linux** tabanlı sistemlere geçiş sayesinde yıllık **15 Milyon Euro** tasarruf hedeflediklerini açıkladı.
@@ -61,7 +61,7 @@ Bu sadece bir mali tasarruf değil; aynı zamanda dijital bağımsızlık ilanı
 **16 Aralık 2025**
 
 <div class="flex justify-center my-6">
-  <img src="${optimizeImage("https://ittech-pulse.com/wp-content/uploads/2025/12/Red-Hat-Accelerates-AI-Trust-and-Security-with-Chatterbox-Labs-Acquisition.png")}" alt="Yapay Zeka ve Güvenlik" class="w-full max-w-lg aspect-video object-cover rounded-xl shadow-md border border-[#22c55e]/20" />
+  <img src="${optimizeImage("https://ittech-pulse.com/wp-content/uploads/2025/12/Red-Hat-Accelerates-AI-Trust-and-Security-with-Chatterbox-Labs-Acquisition.png")}" alt="Yapay Zeka ve Güvenlik" class="w-full max-w-md aspect-video object-cover rounded-xl shadow-md border border-[#22c55e]/20" />
 </div>
 
 Kurumsal Linux pazarının lideri **Red Hat**, yapay zeka güvenliği (AI Safety) alanında uzmanlaşmış **Chatterbox Labs**'i satın alarak portföyünü güçlendirdi.
@@ -77,7 +77,7 @@ Red Hat'in bu hamlesi, özellikle LLM (Büyük Dil Modelleri) kullanımı sıras
 **18 Aralık 2025 | Kopenhag**
 
 <div class="flex justify-center my-6">
-  <img src="${optimizeImage("https://itsfoss.com/content/images/2025/12/denmark-road-transport-authority-ditches-microsoft.png")}" alt="Kopenhag Şehri" class="w-full max-w-lg aspect-video object-cover rounded-xl shadow-md border border-[#22c55e]/20" />
+  <img src="${optimizeImage("https://itsfoss.com/content/images/2025/12/denmark-road-transport-authority-ditches-microsoft.png")}" alt="Kopenhag Şehri" class="w-full max-w-md aspect-video object-cover rounded-xl shadow-md border border-[#22c55e]/20" />
 </div>
 
 Danimarka Karayolu Trafik Otoritesi (*Færdselsstyrelsen*), kamu bilişim altyapısında Microsoft ekosistemine olan bağımlılığı azaltmak için düğmeye bastı. **SIA Open** projesi kapsamında başlatılan pilot uygulama, kamu dairelerinin tescilli yazılımlar yerine, birlikte çalışabilirliği (interoperability) yüksek açık kaynak çözümlere geçişini test ediyor.
@@ -91,7 +91,7 @@ Danimarka Karayolu Trafik Otoritesi (*Færdselsstyrelsen*), kamu bilişim altyap
 **18 Aralık 2025**
 
 <div class="flex justify-center my-6">
-  <img src="${optimizeImage("https://i0.wp.com/9to5linux.com/wp-content/uploads/2025/12/lk617e.webp?resize=1400%2C800&ssl=1")}" alt="Linux Kod Ekranı" class="w-full max-w-lg aspect-video object-cover rounded-xl shadow-md border border-[#22c55e]/20" />
+  <img src="${optimizeImage("https://i0.wp.com/9to5linux.com/wp-content/uploads/2025/12/lk617e.webp?resize=1400%2C800&ssl=1")}" alt="Linux Kod Ekranı" class="w-full max-w-md aspect-video object-cover rounded-xl shadow-md border border-[#22c55e]/20" />
 </div>
 
 Linux sistem yöneticileri için değişim zamanı! Linux 6.17 serisi yaşam döngüsünü tamamlarken, **Linux 6.18** resmen **LTS (Uzun Süreli Destek)** statüsü kazandı.
@@ -110,7 +110,7 @@ Linux sistem yöneticileri için değişim zamanı! Linux 6.17 serisi yaşam dö
 **19 Aralık 2025**
 
 <div class="flex justify-center my-6">
-  <img src="${optimizeImage("https://www.amazic.com/media/omnyfy/post/media/Unlimited_access_to_Docker_Hardened_Images_Because_security_should_be_affordable_always.jpg")}" alt="Konteyner ve Nakliye" class="w-full max-w-lg aspect-video object-cover rounded-xl shadow-md border border-[#22c55e]/20" />
+  <img src="${optimizeImage("https://www.amazic.com/media/omnyfy/post/media/Unlimited_access_to_Docker_Hardened_Images_Because_security_should_be_affordable_always.jpg")}" alt="Konteyner ve Nakliye" class="w-full max-w-md aspect-video object-cover rounded-xl shadow-md border border-[#22c55e]/20" />
 </div>
 
 Konteyner dünyasında güvenlik standartları değişiyor. Docker, daha önce sadece ücretli kurumsal abonelerine sunduğu **"Güçlendirilmiş İmajlar" (Hardened Images)** kütüphanesini **Apache 2.0 Lisansı** ile herkesin kullanımına açtı.
@@ -126,7 +126,7 @@ Bu, artık bireysel geliştiricilerin ve küçük start-up'ların da bankacılı
 **22 Aralık 2025**
 
 <div class="flex justify-center my-6">
-  <img src="${optimizeImage("https://images.unsplash.com/photo-1558494949-efc5270f9c23")}" alt="Veritabanı Sunucuları" class="w-full max-w-lg aspect-video object-cover rounded-xl shadow-md border border-[#22c55e]/20" />
+  <img src="${optimizeImage("https://images.unsplash.com/photo-1558494949-efc5270f9c23")}" alt="Veritabanı Sunucuları" class="w-full max-w-md aspect-video object-cover rounded-xl shadow-md border border-[#22c55e]/20" />
 </div>
 
 Vektör veritabanı savaşlarında PostgreSQL vites artırıyor. Tiger Data (eski adıyla Timescale), **pg_textsearch** eklentisi ile **BM25 (Best Matching 25)** algoritmasını PostgreSQL'e entegre etti.
