@@ -23,6 +23,7 @@ export default async function OpenSourcePage() {
         ...a,
         tags: a.tags ? a.tags.split(',') : [],
         image: a.image || "/placeholder.svg", // Fallback for image
+        githubUrl: a.githubUrl || undefined, // Convert null to undefined
         avatar: a.avatar || "", // Fallback to empty string for article author
         comments: a.comments.map(c => ({
             ...c,
