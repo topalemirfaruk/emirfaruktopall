@@ -10,6 +10,11 @@ const PLAYLIST = [
         title: "Tükeneceğiz",
         artist: "Sezen Aksu",
         src: "https://mp3indirdur.life/Sezen-Aksu-Tukenecegiz-77920?dinle=1"
+    },
+    {
+        title: "Dönence",
+        artist: "Barış Manço",
+        src: "https://mp3indirdur.life/Baris-Manco-Donence-13534?dinle=1"
     }
 ]
 
