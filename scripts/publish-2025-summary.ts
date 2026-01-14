@@ -18,11 +18,7 @@ async function main() {
 ## Avrupa'dan Bulut Devlerine "Gizlilik" Uyarısı
 **2 Aralık 2025 | İsviçre**
 
-
-<div class="flex justify-center">
-  <img src="https://images.unsplash.com/photo-1563206767-5b1d972e813b?auto=format&fit=crop&w=1000&q=80" alt="Veri Gizliliği ve Bulut" class="rounded-xl shadow-lg w-full max-w-2xl object-cover h-64" />
-</div>
-
+![Veri Gizliliği ve Bulut](https://images.unsplash.com/photo-1563206767-5b1d972e813b?auto=format&fit=crop&w=1000&q=80)
 
 Veri gizliliği konusunda dünyanın en katı standartlarına sahip ülkelerinden biri olan **İsviçre**, veri koruma otoriteleri aracılığıyla kritik bir uyarı yayınladı. Kamu kurumlarının, hassas vatandaş verilerini uluslararası bulut sağlayıcılarına (Hyperscalers) emanet etmesinin **büyük risk** taşıdığı vurgulandı.
 
@@ -36,11 +32,7 @@ Raporda, özellikle **Microsoft 365** gibi yaygın SaaS çözümlerinin, İsviç
 ## Almanya'dan Açık Kaynak ile Dev Tasarruf: 15 Milyon €
 **8 Aralık 2025 | Schleswig-Holstein, Almanya**
 
-
-<div class="flex justify-center">
-  <img src="https://images.unsplash.com/photo-1449034446853-66c86144b0ad?auto=format&fit=crop&w=1000&q=80" alt="Almanya Bayrağı ve Teknoloji" class="rounded-xl shadow-lg w-full max-w-2xl object-cover h-64" />
-</div>
-
+![Almanya Bayrağı ve Teknoloji](https://images.unsplash.com/photo-1449034446853-66c86144b0ad?auto=format&fit=crop&w=1000&q=80)
 
 Almanya'nın Schleswig-Holstein eyaleti, "Kamu Parası Kamu Koduna" (*Public Money, Public Code*) prensibini hayata geçiriyor. Eyalet yönetimi, 2026 mali yılı itibarıyla Microsoft lisanslarından tamamen çıkarak **LibreOffice** ve **Linux** tabanlı sistemlere geçiş sayesinde yıllık **15 Milyon Euro** tasarruf hedeflediklerini açıkladı.
 
@@ -52,11 +44,7 @@ Bu sadece bir mali tasarruf değil; aynı zamanda dijital bağımsızlık ilanı
 ## Red Hat’ten Yapay Zeka Güvenliği Hamlesi: Chatterbox Labs
 **16 Aralık 2025**
 
-
-<div class="flex justify-center">
-  <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=1000&q=80" alt="Yapay Zeka ve Güvenlik" class="rounded-xl shadow-lg w-full max-w-2xl object-cover h-64" />
-</div>
-
+![Yapay Zeka ve Güvenlik](https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=1000&q=80)
 
 Kurumsal Linux pazarının lideri **Red Hat**, yapay zeka güvenliği (AI Safety) alanında uzmanlaşmış **Chatterbox Labs**'i satın alarak portföyünü güçlendirdi.
 
@@ -68,11 +56,7 @@ Red Hat'in bu hamlesi, özellikle LLM (Büyük Dil Modelleri) kullanımı sıras
 ## Danimarka Microsoft Bağımlılığına "Dur" Diyor
 **18 Aralık 2025 | Kopenhag**
 
-
-<div class="flex justify-center">
-  <img src="https://images.unsplash.com/photo-1513622470522-26c3c8a854bc?auto=format&fit=crop&w=1000&q=80" alt="Kopenhag Şehri" class="rounded-xl shadow-lg w-full max-w-2xl object-cover h-64" />
-</div>
-
+![Kopenhag Şehri](https://images.unsplash.com/photo-1513622470522-26c3c8a854bc?auto=format&fit=crop&w=1000&q=80)
 
 Danimarka Karayolu Trafik Otoritesi (*Færdselsstyrelsen*), kamu bilişim altyapısında Microsoft ekosistemine olan bağımlılığı azaltmak için düğmeye bastı. **SIA Open** projesi kapsamında başlatılan pilot uygulama, kamu dairelerinin tescilli yazılımlar yerine, birlikte çalışabilirliği (interoperability) yüksek açık kaynak çözümlere geçişini test ediyor.
 
@@ -82,11 +66,7 @@ Danimarka Karayolu Trafik Otoritesi (*Færdselsstyrelsen*), kamu bilişim altyap
 ## Çekirdek Güncellemesi: Linux 6.18 LTS Sahneye Çıktı
 **18 Aralık 2025**
 
-
-<div class="flex justify-center">
-  <img src="https://images.unsplash.com/photo-1629654297299-add3b8f6c4ce?auto=format&fit=crop&w=1000&q=80" alt="Linux Kod Ekranı" class="rounded-xl shadow-lg w-full max-w-2xl object-cover h-64" />
-</div>
-
+![Linux Kod Ekranı](https://images.unsplash.com/photo-1629654297299-add3b8f6c4ce?auto=format&fit=crop&w=1000&q=80)
 
 Linux sistem yöneticileri için değişim zamanı! Linux 6.17 serisi yaşam döngüsünü tamamlarken, **Linux 6.18** resmen **LTS (Uzun Süreli Destek)** statüsü kazandı.
 
@@ -101,11 +81,7 @@ Linux sistem yöneticileri için değişim zamanı! Linux 6.17 serisi yaşam dö
 ## Docker: "Hardened" İmajlar Artık Herkese Açık
 **19 Aralık 2025**
 
-
-<div class="flex justify-center">
-  <img src="https://images.unsplash.com/photo-1494412574643-35d324698420?auto=format&fit=crop&w=1000&q=80" alt="Konteyner ve Nakliye" class="rounded-xl shadow-lg w-full max-w-2xl object-cover h-64" />
-</div>
-
+![Konteyner ve Nakliye](https://images.unsplash.com/photo-1494412574643-35d324698420?auto=format&fit=crop&w=1000&q=80)
 
 Konteyner dünyasında güvenlik standartları değişiyor. Docker, daha önce sadece ücretli kurumsal abonelerine sunduğu **"Güçlendirilmiş İmajlar" (Hardened Images)** kütüphanesini **Apache 2.0 Lisansı** ile herkesin kullanımına açtı.
 
@@ -117,11 +93,7 @@ Bu, artık bireysel geliştiricilerin ve küçük start-up'ların da bankacılı
 ## PostgreSQL'de Yapay Zeka Devrimi: BM25 Algoritması
 **22 Aralık 2025**
 
-
-<div class="flex justify-center">
-  <img src="https://images.unsplash.com/photo-1558494949-efc5270f9c23?auto=format&fit=crop&w=1000&q=80" alt="Veritabanı Sunucuları" class="rounded-xl shadow-lg w-full max-w-2xl object-cover h-64" />
-</div>
-
+![Veritabanı Sunucuları](https://images.unsplash.com/photo-1558494949-efc5270f9c23?auto=format&fit=crop&w=1000&q=80)
 
 Vektör veritabanı savaşlarında PostgreSQL vites artırıyor. Tiger Data (eski adıyla Timescale), **pg_textsearch** eklentisi ile **BM25 (Best Matching 25)** algoritmasını PostgreSQL'e entegre etti.
 
