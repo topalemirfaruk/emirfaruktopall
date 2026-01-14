@@ -10,13 +10,15 @@ async function main() {
         slug: "2025-acik-kaynak-dunyasi-ozeti",
         excerpt: "2025'in finalinde Avrupa'nın dijital egemenlik hamleleri, Red Hat'in yapay zeka güvenliği yatırımı ve Linux dünyasındaki kritik LTS geçişleri gündeme damgasını vurdu.",
         content: `
-
 2025 yılını geride bırakırken, Aralık ayı açık kaynak dünyası için sadece bir takvim yaprağı değil, stratejik kararların ve teknolojik sıçramaların ayı oldu. Özellikle Avrupa kamu kurumlarının **"Vendor Lock-in" (Tedarikçi Kilidi)** endişesiyle başlattığı devrim niteliğindeki geçiş planları ve yapay zeka güvenliğindeki açık kaynak hamleleri, 2026'nın nasıl geçeceğinin sinyallerini veriyor.
 
 İşte editörün seçimiyle, Aralık ayının en çarpıcı gelişmeleri ve detaylı analizleri.
 
+
 ## Avrupa'dan Bulut Devlerine "Gizlilik" Uyarısı
 **2 Aralık 2025 | İsviçre**
+
+![Veri Gizliliği ve Bulut](https://images.unsplash.com/photo-1563206767-5b1d972e813b?auto=format&fit=crop&w=1000&q=80)
 
 Veri gizliliği konusunda dünyanın en katı standartlarına sahip ülkelerinden biri olan **İsviçre**, veri koruma otoriteleri aracılığıyla kritik bir uyarı yayınladı. Kamu kurumlarının, hassas vatandaş verilerini uluslararası bulut sağlayıcılarına (Hyperscalers) emanet etmesinin **büyük risk** taşıdığı vurgulandı.
 
@@ -27,9 +29,10 @@ Raporda, özellikle **Microsoft 365** gibi yaygın SaaS çözümlerinin, İsviç
 🔗 [Kaynak Haberi İncele](https://lnkd.in/dDAjztMu)
 
 
-
 ## Almanya'dan Açık Kaynak ile Dev Tasarruf: 15 Milyon €
 **8 Aralık 2025 | Schleswig-Holstein, Almanya**
+
+![Almanya Bayrağı ve Teknoloji](https://images.unsplash.com/photo-1449034446853-66c86144b0ad?auto=format&fit=crop&w=1000&q=80)
 
 Almanya'nın Schleswig-Holstein eyaleti, "Kamu Parası Kamu Koduna" (*Public Money, Public Code*) prensibini hayata geçiriyor. Eyalet yönetimi, 2026 mali yılı itibarıyla Microsoft lisanslarından tamamen çıkarak **LibreOffice** ve **Linux** tabanlı sistemlere geçiş sayesinde yıllık **15 Milyon Euro** tasarruf hedeflediklerini açıkladı.
 
@@ -38,9 +41,10 @@ Bu sadece bir mali tasarruf değil; aynı zamanda dijital bağımsızlık ilanı
 🔗 [Detaylı Rapor](https://lnkd.in/dNs4nQ3x)
 
 
-
 ## Red Hat’ten Yapay Zeka Güvenliği Hamlesi: Chatterbox Labs
 **16 Aralık 2025**
+
+![Yapay Zeka ve Güvenlik](https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=1000&q=80)
 
 Kurumsal Linux pazarının lideri **Red Hat**, yapay zeka güvenliği (AI Safety) alanında uzmanlaşmış **Chatterbox Labs**'i satın alarak portföyünü güçlendirdi.
 
@@ -49,18 +53,20 @@ Red Hat'in bu hamlesi, özellikle LLM (Büyük Dil Modelleri) kullanımı sıras
 🔗 [Satın Alma Duyurusu](https://lnkd.in/dCf4pt2q)
 
 
-
 ## Danimarka Microsoft Bağımlılığına "Dur" Diyor
 **18 Aralık 2025 | Kopenhag**
+
+![Kopenhag Şehri](https://images.unsplash.com/photo-1513622470522-26c3c8a854bc?auto=format&fit=crop&w=1000&q=80)
 
 Danimarka Karayolu Trafik Otoritesi (*Færdselsstyrelsen*), kamu bilişim altyapısında Microsoft ekosistemine olan bağımlılığı azaltmak için düğmeye bastı. **SIA Open** projesi kapsamında başlatılan pilot uygulama, kamu dairelerinin tescilli yazılımlar yerine, birlikte çalışabilirliği (interoperability) yüksek açık kaynak çözümlere geçişini test ediyor.
 
 🔗 [Proje Detayları](https://lnkd.in/drR5T5JR)
 
 
-
 ## Çekirdek Güncellemesi: Linux 6.18 LTS Sahneye Çıktı
 **18 Aralık 2025**
+
+![Linux Kod Ekranı](https://images.unsplash.com/photo-1629654297299-add3b8f6c4ce?auto=format&fit=crop&w=1000&q=80)
 
 Linux sistem yöneticileri için değişim zamanı! Linux 6.17 serisi yaşam döngüsünü tamamlarken, **Linux 6.18** resmen **LTS (Uzun Süreli Destek)** statüsü kazandı.
 
@@ -72,9 +78,10 @@ Linux sistem yöneticileri için değişim zamanı! Linux 6.17 serisi yaşam dö
 🔗 [Kernel Sürüm Notları](https://lnkd.in/df24Qbyq)
 
 
-
 ## Docker: "Hardened" İmajlar Artık Herkese Açık
 **19 Aralık 2025**
+
+![Konteyner ve Nakliye](https://images.unsplash.com/photo-1494412574643-35d324698420?auto=format&fit=crop&w=1000&q=80)
 
 Konteyner dünyasında güvenlik standartları değişiyor. Docker, daha önce sadece ücretli kurumsal abonelerine sunduğu **"Güçlendirilmiş İmajlar" (Hardened Images)** kütüphanesini **Apache 2.0 Lisansı** ile herkesin kullanımına açtı.
 
@@ -83,9 +90,10 @@ Bu, artık bireysel geliştiricilerin ve küçük start-up'ların da bankacılı
 🔗 [Docker Blog](https://lnkd.in/dmF-y9DJ)
 
 
-
 ## PostgreSQL'de Yapay Zeka Devrimi: BM25 Algoritması
 **22 Aralık 2025**
+
+![Veritabanı Sunucuları](https://images.unsplash.com/photo-1558494949-efc5270f9c23?auto=format&fit=crop&w=1000&q=80)
 
 Vektör veritabanı savaşlarında PostgreSQL vites artırıyor. Tiger Data (eski adıyla Timescale), **pg_textsearch** eklentisi ile **BM25 (Best Matching 25)** algoritmasını PostgreSQL'e entegre etti.
 
