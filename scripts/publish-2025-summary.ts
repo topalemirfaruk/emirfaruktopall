@@ -4,209 +4,114 @@ import { PrismaClient } from "@prisma/client"
 const prisma = new PrismaClient()
 
 async function main() {
-    const article = await prisma.article.upsert({
-        where: { slug: "2025-acik-kaynak-dunyasi-ozeti" },
-        update: {
-            title: "2025 Yıllığı: Açık Kaynak Dünyasında Neler Oldu?",
-            content: `
-2025 yılı, açık kaynak ekosistemi için devrim niteliğinde gelişmelerin yaşandığı, yapay zekanın demokratikleştiği ve Linux masaüstünün hiç olmadığı kadar güçlendiği bir yıl oldu. İşte ay ay yaşanan en önemli gelişmeler, kaynaklar ve görsellerle 2025 panoraması.
-
-## 📅 15 Ocak 2025: Linux Kernel 6.13 ve Rust Devrimi
-
-Yıl, Linux çekirdeğinde tarihi bir dönüm noktasıyla başladı. Linus Torvalds, **Linux Kernel 6.13** sürümünü duyurdu. Bu sürümün en büyük özelliği, kritik dosya sistemi sürücülerinin ilk kez bellek güvenliği sağlayan **Rust** dili ile yeniden yazılmış olmasıydı.
-
-![Linux Kernel Rust Entegrasyonu](https://images.unsplash.com/photo-1629654297299-add3b8f6c4ce?auto=format&fit=crop&w=1000&q=80)
-*Görsel: Çekirdek geliştirme süreçlerinde yeni dönem.*
-
-*   **Önem:** Bellek yönetimi hatalarından kaynaklanan güvenlik açıkları %40 azaldı.
-*   **Kaynak:** [Kernel.org Duyurusu](https://kernel.org)
-
-## 📅 28 Şubat 2025: GNOME 48 ve HDR Desteği
-
-Masaüstü tarafında beklenen devrim Şubat sonunda geldi. GNOME ekibi, **GNOME 48** sürümünü yayınladı. Bu sürümle birlikte Linux masaüstünde **HDR (Yüksek Dinamik Aralık)** ve **VRR (Değişken Yenileme Hızı)** desteği varsayılan olarak geldi.
-
-
-<video width="100%" controls autoplay loop muted playsinline class="rounded-lg border border-[#1a2e1a] my-6">
-  <source src="https://release.gnome.org/48/stacked-notifications.webm" type="video/webm">
-  Tarayıcınız video etiketini desteklemiyor.
-</video>
-*Video: Modern ve akıcı GNOME 48 arayüzü ve yığılmış bildirimler.*
-
-*   **Önem:** Linux oyunculuğu ve grafik tasarımı için renk doğruluğu sorunu tamamen çözüldü.
-*   **Kaynak:** [GNOME Release Notes](https://release.gnome.org)
-
-## 📅 10 Nisan 2025: Meta'nın "Llama 4" Hamlesi
-
-Yapay zeka dünyasında kartlar yeniden dağıtıldı. Meta, **Llama 4** modelini tamamen açık kaynak lisansıyla (Apache 2.0) yayınladı. Bu model, GPT-5 ile yarışan performansını ev kullanıcılarının bilgisayarlarına getirdi.
-
-![Yapay Zeka Modelleri](https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1000&q=80)
-
-*   **Önem:** Yerel yapay zeka asistanları (Local LLMs) patlama yaptı.
-*   **Kaynak:** [Meta AI Blog](https://ai.meta.com)
-
-## 📅 24 Nisan 2025: Ubuntu 25.04 "Plucky Puffin" Yayınlandı
-
-Canonical, **Ubuntu 25.04** sürümünü yayınladı. Bu sürüm, kurulum süresini 5 dakikanın altına indiren yeni "Flutter tabanlı yükleyici" ve varsayılan **Wayland** deneyimi ile geldi.
-
-*   **Önem:** Son kullanıcı için Linux'a geçiş bariyeri neredeyse sıfıra indi.
-*   **Kaynak:** [Ubuntu Blog](https://ubuntu.com/blog)
-
-## 📅 15 Ağustos 2025: SteamOS Genel Dağıtımı
-
-Valve, Steam Deck ile yakaladığı başarıyı masaüstüne taşıdı. **SteamOS 4.0**, tüm PC donanımları için ücretsiz bir ISO dosyası olarak yayınlandı. Windows'a rakip, oyun odaklı ilk gerçek Linux dağıtımı evlere girdi.
-
-![SteamOS Arayüzü](https://images.unsplash.com/photo-1612287230217-9698698061e3?auto=format&fit=crop&w=1000&q=80)
-
-*   **Önem:** Linux pazar payı bu hamleyle %6 seviyesini aştı.
-*   **Kaynak:** [Steam Powered](https://store.steampowered.com)
-
-## 📅 12 Kasım 2025: Mozilla Firefox'un Dönüşü
-
-Tarayıcı savaşlarında Firefox, yeni **"Quantum II"** motorunu duyurdu. Yapay zeka destekli sayfa işleme teknolojisi sayesinde, bellek kullanımını Chrome'un yarısına indirdi.
-
-*   **Önem:** Gizlilik odaklı tarayıcı kullanımı tekrar yükselişe geçti.
-*   **Kaynak:** [Mozilla Blog](https://blog.mozilla.org)
-
-## 📅 20 Aralık 2025: Açık Kaynak Donanım Zirvesi
-
-Yılın son sürprizi donanım dünyasından geldi. **RISC-V** mimarili ilk yüksek performanslı dizüstü bilgisayarlar piyasaya sürüldü.
-
-![RISC-V İşlemci](https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?auto=format&fit=crop&w=1000&q=80)
-
-*   **Önem:** Donanım seviyesinde de "açık kaynak" felsefesi ana akım olmaya başladı.
-
-2025, sadece yazılımın değil, özgürlüğün ve topluluğun kazandığı bir yıl oldu. 2026'da görüşmek üzere!
-      `,
-        },
-        create: {
-            title: "2025 Yıllığı: Açık Kaynak Dünyasında Neler Oldu?",
-            slug: "2025-acik-kaynak-dunyasi-ozeti",
-            excerpt: "Linux Kernel 6.13, Llama 4, SteamOS 4.0 ve daha fazlası. 2025 yılında açık kaynak dünyasının ay ay detaylı dökümü.",
-            content: `... (İçerik yukarıdakiyle aynı olacak şekilde buraya kopyalanırsa çok uzun olur, create kısmı upsert mantığıyla sadece ilk oluşumda çalışır, biz zaten var olanı güncelliyoruz) ...`,
-            // Not: create kısmını kısa tutuyorum çünkü upsert 'update' bloğunu çalıştıracak.
-            // Ancak sıfırdan oluşturulursa diye create bloğuna da içeriği koymalıyım.
-            // Kod tekrarı olmaması için değişken kullanacağım.
-            category: "Açık Kaynak",
-            image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=1000&auto=format&fit=crop",
-            author: "Emir Faruk Topal",
-            avatar: "https://github.com/topalemirfaruk.png",
-            date: "14 Ocak 2026",
-            readTime: "8 dk",
-            tags: "2025,yillik,linux,opensource,teknoloji",
-        }
-    })
-
-    // Create bloğu için içeriği düzeltelim, upsert'te data objesi tekrarı için variable
+    // Defines the new content structure
     const articleData = {
-        title: "2025 Yıllığı: Açık Kaynak Dünyasında Neler Oldu?",
+        title: "Aralık 2025: Açık Kaynak Dünyasında Yılın Son Büyük Gelişmeleri",
         slug: "2025-acik-kaynak-dunyasi-ozeti",
-        excerpt: "Linux Kernel 6.13, Llama 4, SteamOS 4.0 ve daha fazlası. 2025 yılında açık kaynak dünyasının ay ay detaylı dökümü.",
+        excerpt: "2025'in finalinde Avrupa'nın dijital egemenlik hamleleri, Red Hat'in yapay zeka güvenliği yatırımı ve Linux dünyasındaki kritik LTS geçişleri gündeme damgasını vurdu.",
         content: `
-2025 yılı, açık kaynak ekosistemi için devrim niteliğinde gelişmelerin yaşandığı, yapay zekanın demokratikleştiği ve Linux masaüstünün hiç olmadığı kadar güçlendiği bir yıl oldu. İşte ay ay yaşanan en önemli gelişmeler, kaynaklar ve görsellerle 2025 panoraması.
+# Aralık 2025: Dijital Egemenlik ve Açık Kaynak Devrimi
+
+2025 yılını geride bırakırken, Aralık ayı açık kaynak dünyası için sadece bir takvim yaprağı değil, stratejik kararların ve teknolojik sıçramaların ayı oldu. Özellikle Avrupa kamu kurumlarının **"Vendor Lock-in" (Tedarikçi Kilidi)** endişesiyle başlattığı devrim niteliğindeki geçiş planları ve yapay zeka güvenliğindeki açık kaynak hamleleri, 2026'nın nasıl geçeceğinin sinyallerini veriyor.
+
+İşte editörün seçimiyle, Aralık ayının en çarpıcı gelişmeleri ve detaylı analizleri.
 
 ---
 
-## 📅 15 Ocak 2025: Linux Kernel 6.13 ve Rust Devrimi
+## 🛡️ Avrupa'dan Bulut Devlerine "Gizlilik" Uyarısı
+**📅 2 Aralık 2025 | İsviçre**
 
-Yıl, Linux çekirdeğinde tarihi bir dönüm noktasıyla başladı. Linus Torvalds, **Linux Kernel 6.13** sürümünü duyurdu. Bu sürümün en büyük özelliği, kritik dosya sistemi sürücülerinin ilk kez bellek güvenliği sağlayan **Rust** dili ile yeniden yazılmış olmasıydı.
+Veri gizliliği konusunda dünyanın en katı standartlarına sahip ülkelerinden biri olan **İsviçre**, veri koruma otoriteleri aracılığıyla kritik bir uyarı yayınladı. Kamu kurumlarının, hassas vatandaş verilerini uluslararası bulut sağlayıcılarına (Hyperscalers) emanet etmesinin **büyük risk** taşıdığı vurgulandı.
 
-![Linux Kernel Rust Entegrasyonu](https://images.unsplash.com/photo-1629654297299-add3b8f6c4ce?auto=format&fit=crop&w=1000&q=80)
-*Görsel: Çekirdek geliştirme süreçlerinde yeni dönem.*
+Raporda, özellikle **Microsoft 365** gibi yaygın SaaS çözümlerinin, İsviçre ve AB gizlilik standartlarını tam olarak karşılayamadığı belirtiliyor. Bu durum, kurumları **Nextcloud** veya **OwnCloud** gibi yerinde barındırılan (on-premise) açık kaynak alternatiflere yönelmeye zorluyor.
 
-*   **Önem:** Bellek yönetimi hatalarından kaynaklanan güvenlik açıkları %40 azaldı.
-*   **Kaynak:** [Kernel.org Duyurusu](https://kernel.org)
+> *"Veri egemenliği, dijital çağın en kritik ulusal güvenlik meselesidir."*
 
----
+🔗 [Kaynak Haberi İncele](https://lnkd.in/dDAjztMu)
 
-## 📅 28 Şubat 2025: GNOME 48 ve HDR Desteği
+## 💶 Almanya'dan Açık Kaynak ile Dev Tasarruf: 15 Milyon €
+**📅 8 Aralık 2025 | Schleswig-Holstein, Almanya**
 
-Masaüstü tarafında beklenen devrim Şubat sonunda geldi. GNOME ekibi, **GNOME 48** sürümünü yayınladı. Bu sürümle birlikte Linux masaüstünde **HDR (Yüksek Dinamik Aralık)** ve **VRR (Değişken Yenileme Hızı)** desteği varsayılan olarak geldi.
+Almanya'nın Schleswig-Holstein eyaleti, "Kamu Parası Kamu Koduna" (*Public Money, Public Code*) prensibini hayata geçiriyor. Eyalet yönetimi, 2026 mali yılı itibarıyla Microsoft lisanslarından tamamen çıkarak **LibreOffice** ve **Linux** tabanlı sistemlere geçiş sayesinde yıllık **15 Milyon Euro** tasarruf hedeflediklerini açıkladı.
 
+Bu sadece bir mali tasarruf değil; aynı zamanda dijital bağımsızlık ilanı. Eyalet, bu bütçeyi yerel açık kaynak geliştiricilerini desteklemek için kullanmayı planlıyor.
 
-<video width="100%" controls autoplay loop muted playsinline class="rounded-lg border border-[#1a2e1a] my-6">
-  <source src="https://release.gnome.org/48/stacked-notifications.webm" type="video/webm">
-  Tarayıcınız video etiketini desteklemiyor.
-</video>
-*Video: Modern ve akıcı GNOME 48 arayüzü ve yığılmış bildirimler.*
+🔗 [Detaylı Rapor](https://lnkd.in/dNs4nQ3x)
 
-*   **Önem:** Linux oyunculuğu ve grafik tasarımı için renk doğruluğu sorunu tamamen çözüldü.
-*   **Kaynak:** [GNOME Release Notes](https://release.gnome.org)
+## 🤖 Red Hat’ten Yapay Zeka Güvenliği Hamlesi: Chatterbox Labs
+**📅 16 Aralık 2025**
 
----
+Kurumsal Linux pazarının lideri **Red Hat**, yapay zeka güvenliği (AI Safety) alanında uzmanlaşmış **Chatterbox Labs**'i satın alarak portföyünü güçlendirdi.
 
-## 📅 10 Nisan 2025: Meta'nın "Llama 4" Hamlesi
+Red Hat'in bu hamlesi, özellikle LLM (Büyük Dil Modelleri) kullanımı sırasında ortaya çıkabilecek "halüsinasyon" ve "veri sızıntısı" risklerini minimize etmeyi hedefliyor. En heyecan verici kısım ise Red Hat'in **Chatterbox teknolojilerini açık kaynaklı hale getirme** sözü vermesi. Bu, güvenli yapay zekanın demokratikleşmesi adına dev bir adım.
 
-Yapay zeka dünyasında kartlar yeniden dağıtıldı. Meta, **Llama 4** modelini tamamen açık kaynak lisansıyla (Apache 2.0) yayınladı. Bu model, GPT-5 ile yarışan performansını ev kullanıcılarının bilgisayarlarına getirdi.
+🔗 [Satın Alma Duyurusu](https://lnkd.in/dCf4pt2q)
 
-![Yapay Zeka Modelleri](https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1000&q=80)
+## 🏛️ Danimarka Microsoft Bağımlılığına "Dur" Diyor
+**📅 18 Aralık 2025 | Kopenhag**
 
-*   **Önem:** Yerel yapay zeka asistanları (Local LLMs) patlama yaptı.
-*   **Kaynak:** [Meta AI Blog](https://ai.meta.com)
+Danimarka Karayolu Trafik Otoritesi (*Færdselsstyrelsen*), kamu bilişim altyapısında Microsoft ekosistemine olan bağımlılığı azaltmak için düğmeye bastı. **SIA Open** projesi kapsamında başlatılan pilot uygulama, kamu dairelerinin tescilli yazılımlar yerine, birlikte çalışabilirliği (interoperability) yüksek açık kaynak çözümlere geçişini test ediyor.
 
----
+🔗 [Proje Detayları](https://lnkd.in/drR5T5JR)
 
-## 📅 24 Nisan 2025: Ubuntu 25.04 "Plucky Puffin" Yayınlandı
+## 🐧 Çekirdek Güncellemesi: Linux 6.18 LTS Sahneye Çıktı
+**📅 18 Aralık 2025**
 
-Canonical, **Ubuntu 25.04** sürümünü yayınladı. Bu sürüm, kurulum süresini 5 dakikanın altına indiren yeni "Flutter tabanlı yükleyici" ve varsayılan **Wayland** deneyimi ile geldi.
+Linux sistem yöneticileri için değişim zamanı! Linux 6.17 serisi yaşam döngüsünü tamamlarken, **Linux 6.18** resmen **LTS (Uzun Süreli Destek)** statüsü kazandı.
 
-*   **Önem:** Son kullanıcı için Linux'a geçiş bariyeri neredeyse sıfıra indi.
-*   **Kaynak:** [Ubuntu Blog](https://ubuntu.com/blog)
+**Neden 6.18'e Geçmelisiniz?**
+*   **2 Yıllık Destek:** 2027 sonuna kadar güvenlik yamaları garanti.
+*   **Performans:** Yeni nesil NVMe sürücüleri ve Rust tabanlı bellek yönetimi iyileştirmeleri.
+*   **Donanım:** 2025 sonu çıkan tüm yeni işlemciler için tam destek.
 
----
+🔗 [Kernel Sürüm Notları](https://lnkd.in/df24Qbyq)
 
-## 📅 15 Ağustos 2025: SteamOS Genel Dağıtımı
+## 📦 Docker: "Hardened" İmajlar Artık Herkese Açık
+**📅 19 Aralık 2025**
 
-Valve, Steam Deck ile yakaladığı başarıyı masaüstüne taşıdı. **SteamOS 4.0**, tüm PC donanımları için ücretsiz bir ISO dosyası olarak yayınlandı. Windows'a rakip, oyun odaklı ilk gerçek Linux dağıtımı evlere girdi.
+Konteyner dünyasında güvenlik standartları değişiyor. Docker, daha önce sadece ücretli kurumsal abonelerine sunduğu **"Güçlendirilmiş İmajlar" (Hardened Images)** kütüphanesini **Apache 2.0 Lisansı** ile herkesin kullanımına açtı.
 
-![SteamOS Arayüzü](https://images.unsplash.com/photo-1612287230217-9698698061e3?auto=format&fit=crop&w=1000&q=80)
+Bu, artık bireysel geliştiricilerin ve küçük start-up'ların da bankacılık seviyesinde güvenliğe sahip konteyner altyapıları kurabileceği anlamına geliyor. DevSecOps süreçleri için büyük bir kazanım.
 
-*   **Önem:** Linux pazar payı bu hamleyle %6 seviyesini aştı.
-*   **Kaynak:** [Steam Powered](https://store.steampowered.com)
+🔗 [Docker Blog](https://lnkd.in/dmF-y9DJ)
 
----
+## 🔎 PostgreSQL'de Yapay Zeka Devrimi: BM25 Algoritması
+**📅 22 Aralık 2025**
 
-## 📅 12 Kasım 2025: Mozilla Firefox'un Dönüşü
+Vektör veritabanı savaşlarında PostgreSQL vites artırıyor. Tiger Data (eski adıyla Timescale), **pg_textsearch** eklentisi ile **BM25 (Best Matching 25)** algoritmasını PostgreSQL'e entegre etti.
 
-Tarayıcı savaşlarında Firefox, yeni **"Quantum II"** motorunu duyurdu. Yapay zeka destekli sayfa işleme teknolojisi sayesinde, bellek kullanımını Chrome'un yarısına indirdi.
+**Bu Ne Anlama Geliyor?**
+Özellikle RAG (Retrieval-Augmented Generation) tabanlı yapay zeka uygulamaları geliştirenler için, veritabanı sorgularının alaka düzeyi (relevance) inanılmaz derecede artıyor. Artık ElasticSearch gibi ek katmanlara ihtiyaç duymadan, doğrudan PostgreSQL içinde yüksek kaliteli arama sonuçları almak mümkün.
 
-*   **Önem:** Gizlilik odaklı tarayıcı kullanımı tekrar yükselişe geçti.
-*   **Kaynak:** [Mozilla Blog](https://blog.mozilla.org)
-
----
-
-## 📅 20 Aralık 2025: Açık Kaynak Donanım Zirvesi
-
-Yılın son sürprizi donanım dünyasından geldi. **RISC-V** mimarili ilk yüksek performanslı dizüstü bilgisayarlar piyasaya sürüldü.
-
-![RISC-V İşlemci](https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?auto=format&fit=crop&w=1000&q=80)
-
-*   **Önem:** Donanım seviyesinde de "açık kaynak" felsefesi ana akım olmaya başladı.
+🔗 [Teknik İnceleme](https://lnkd.in/dsQYYdph)
 
 ---
 
-2025, sadece yazılımın değil, özgürlüğün ve topluluğun kazandığı bir yıl oldu. 2026'da görüşmek üzere!
+*2025, açık kaynağın "alternatif" olmaktan çıkıp "standart" haline geldiği yıl olarak tarihe geçti. 2026'da bu ivmenin artarak devam etmesini bekliyoruz. Açık kalın!*
 `,
         category: "Açık Kaynak",
         image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=1000&auto=format&fit=crop",
         author: "Emir Faruk Topal",
         avatar: "https://github.com/topalemirfaruk.png",
         date: "14 Ocak 2026",
-        readTime: "8 dk",
-        tags: "2025,yillik,linux,opensource,teknoloji",
+        readTime: "7 dk",
+        tags: "aralik,2025,haberler,linux,almanya,microsoft,redhat,docker,postgresql",
     }
 
-    // Re-run upsert with correct logic
-    const updatedArticle = await prisma.article.upsert({
+    const article = await prisma.article.upsert({
         where: { slug: "2025-acik-kaynak-dunyasi-ozeti" },
         update: {
             title: articleData.title,
             content: articleData.content,
             excerpt: articleData.excerpt,
+            readTime: articleData.readTime,
+            tags: articleData.tags,
+            // update date to simulate modification? or keep static. User wants content update.
         },
         create: articleData
     })
 
-    console.log("Article upserted:", updatedArticle.slug)
+    console.log("Article updated:", article.slug)
 }
 
 main()
