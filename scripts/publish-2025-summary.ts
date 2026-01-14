@@ -25,8 +25,12 @@ Yıl, Linux çekirdeğinde tarihi bir dönüm noktasıyla başladı. Linus Torva
 
 Masaüstü tarafında beklenen devrim Şubat sonunda geldi. GNOME ekibi, **GNOME 48** sürümünü yayınladı. Bu sürümle birlikte Linux masaüstünde **HDR (Yüksek Dinamik Aralık)** ve **VRR (Değişken Yenileme Hızı)** desteği varsayılan olarak geldi.
 
-![GNOME 48 Masaüstü](https://images.unsplash.com/photo-1547082299-bb196bcc749c?auto=format&fit=crop&w=1000&q=80)
-*Görsel: Modern ve akıcı GNOME 48 arayüzü.*
+
+<video width="100%" controls autoplay loop muted playsinline class="rounded-lg border border-[#1a2e1a] my-6">
+  <source src="https://release.gnome.org/48/stacked-notifications.webm" type="video/webm">
+  Tarayıcınız video etiketini desteklemiyor.
+</video>
+*Video: Modern ve akıcı GNOME 48 arayüzü ve yığılmış bildirimler.*
 
 *   **Önem:** Linux oyunculuğu ve grafik tasarımı için renk doğruluğu sorunu tamamen çözüldü.
 *   **Kaynak:** [GNOME Release Notes](https://release.gnome.org)
@@ -118,8 +122,12 @@ Yıl, Linux çekirdeğinde tarihi bir dönüm noktasıyla başladı. Linus Torva
 
 Masaüstü tarafında beklenen devrim Şubat sonunda geldi. GNOME ekibi, **GNOME 48** sürümünü yayınladı. Bu sürümle birlikte Linux masaüstünde **HDR (Yüksek Dinamik Aralık)** ve **VRR (Değişken Yenileme Hızı)** desteği varsayılan olarak geldi.
 
-![GNOME 48 Masaüstü](https://images.unsplash.com/photo-1547082299-bb196bcc749c?auto=format&fit=crop&w=1000&q=80)
-*Görsel: Modern ve akıcı GNOME 48 arayüzü.*
+
+<video width="100%" controls autoplay loop muted playsinline class="rounded-lg border border-[#1a2e1a] my-6">
+  <source src="https://release.gnome.org/48/stacked-notifications.webm" type="video/webm">
+  Tarayıcınız video etiketini desteklemiyor.
+</video>
+*Video: Modern ve akıcı GNOME 48 arayüzü ve yığılmış bildirimler.*
 
 *   **Önem:** Linux oyunculuğu ve grafik tasarımı için renk doğruluğu sorunu tamamen çözüldü.
 *   **Kaynak:** [GNOME Release Notes](https://release.gnome.org)
