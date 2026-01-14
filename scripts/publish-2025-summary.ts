@@ -16,6 +16,8 @@ async function main() {
 
 İşte editörün seçimiyle, Aralık ayının en çarpıcı gelişmeleri ve detaylı analizleri.
 
+<br><br>
+
 ## 🛡️ Avrupa'dan Bulut Devlerine "Gizlilik" Uyarısı
 **📅 2 Aralık 2025 | İsviçre**
 
@@ -27,6 +29,8 @@ Raporda, özellikle **Microsoft 365** gibi yaygın SaaS çözümlerinin, İsviç
 
 🔗 [Kaynak Haberi İncele](https://lnkd.in/dDAjztMu)
 
+<br><br>
+
 ## 💶 Almanya'dan Açık Kaynak ile Dev Tasarruf: 15 Milyon €
 **📅 8 Aralık 2025 | Schleswig-Holstein, Almanya**
 
@@ -35,6 +39,8 @@ Almanya'nın Schleswig-Holstein eyaleti, "Kamu Parası Kamu Koduna" (*Public Mon
 Bu sadece bir mali tasarruf değil; aynı zamanda dijital bağımsızlık ilanı. Eyalet, bu bütçeyi yerel açık kaynak geliştiricilerini desteklemek için kullanmayı planlıyor.
 
 🔗 [Detaylı Rapor](https://lnkd.in/dNs4nQ3x)
+
+<br><br>
 
 ## 🤖 Red Hat’ten Yapay Zeka Güvenliği Hamlesi: Chatterbox Labs
 **📅 16 Aralık 2025**
@@ -45,12 +51,16 @@ Red Hat'in bu hamlesi, özellikle LLM (Büyük Dil Modelleri) kullanımı sıras
 
 🔗 [Satın Alma Duyurusu](https://lnkd.in/dCf4pt2q)
 
+<br><br>
+
 ## 🏛️ Danimarka Microsoft Bağımlılığına "Dur" Diyor
 **📅 18 Aralık 2025 | Kopenhag**
 
 Danimarka Karayolu Trafik Otoritesi (*Færdselsstyrelsen*), kamu bilişim altyapısında Microsoft ekosistemine olan bağımlılığı azaltmak için düğmeye bastı. **SIA Open** projesi kapsamında başlatılan pilot uygulama, kamu dairelerinin tescilli yazılımlar yerine, birlikte çalışabilirliği (interoperability) yüksek açık kaynak çözümlere geçişini test ediyor.
 
 🔗 [Proje Detayları](https://lnkd.in/drR5T5JR)
+
+<br><br>
 
 ## 🐧 Çekirdek Güncellemesi: Linux 6.18 LTS Sahneye Çıktı
 **📅 18 Aralık 2025**
@@ -64,6 +74,8 @@ Linux sistem yöneticileri için değişim zamanı! Linux 6.17 serisi yaşam dö
 
 🔗 [Kernel Sürüm Notları](https://lnkd.in/df24Qbyq)
 
+<br><br>
+
 ## 📦 Docker: "Hardened" İmajlar Artık Herkese Açık
 **📅 19 Aralık 2025**
 
@@ -72,6 +84,8 @@ Konteyner dünyasında güvenlik standartları değişiyor. Docker, daha önce s
 Bu, artık bireysel geliştiricilerin ve küçük start-up'ların da bankacılık seviyesinde güvenliğe sahip konteyner altyapıları kurabileceği anlamına geliyor. DevSecOps süreçleri için büyük bir kazanım.
 
 🔗 [Docker Blog](https://lnkd.in/dmF-y9DJ)
+
+<br><br>
 
 ## 🔎 PostgreSQL'de Yapay Zeka Devrimi: BM25 Algoritması
 **📅 22 Aralık 2025**
