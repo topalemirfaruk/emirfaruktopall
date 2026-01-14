@@ -126,7 +126,7 @@ Bu, artık bireysel geliştiricilerin ve küçük start-up'ların da bankacılı
 **22 Aralık 2025**
 
 <div class="flex justify-start my-6">
-  <img src="${optimizeImage("https://images.unsplash.com/photo-1558494949-efc5270f9c23")}" alt="Veritabanı Sunucuları" class="w-full max-w-[490px] aspect-video object-cover rounded-xl shadow-md border border-[#22c55e]/20" />
+  <img src="${optimizeImage("https://cdn.thenewstack.io/media/2025/12/11cf57b8-postgres-1024x576.jpg")}" alt="Veritabanı Sunucuları" class="w-full max-w-[490px] aspect-video object-cover rounded-xl shadow-md border border-[#22c55e]/20" />
 </div>
 
 Vektör veritabanı savaşlarında PostgreSQL vites artırıyor. Tiger Data (eski adıyla Timescale), **pg_textsearch** eklentisi ile **BM25 (Best Matching 25)** algoritmasını PostgreSQL'e entegre etti.
