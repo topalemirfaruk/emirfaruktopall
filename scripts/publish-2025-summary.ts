@@ -29,6 +29,8 @@ Raporda, özellikle **Microsoft 365** gibi yaygın SaaS çözümlerinin, İsviç
 🔗 [Kaynak Haberi İncele](https://lnkd.in/dDAjztMu)
 
 
+<br>
+
 ## Almanya'dan Açık Kaynak ile Dev Tasarruf: 15 Milyon €
 **8 Aralık 2025 | Schleswig-Holstein, Almanya**
 
@@ -40,6 +42,8 @@ Bu sadece bir mali tasarruf değil; aynı zamanda dijital bağımsızlık ilanı
 
 🔗 [Detaylı Rapor](https://lnkd.in/dNs4nQ3x)
 
+
+<br>
 
 ## Red Hat’ten Yapay Zeka Güvenliği Hamlesi: Chatterbox Labs
 **16 Aralık 2025**
@@ -53,6 +57,8 @@ Red Hat'in bu hamlesi, özellikle LLM (Büyük Dil Modelleri) kullanımı sıras
 🔗 [Satın Alma Duyurusu](https://lnkd.in/dCf4pt2q)
 
 
+<br>
+
 ## Danimarka Microsoft Bağımlılığına "Dur" Diyor
 **18 Aralık 2025 | Kopenhag**
 
@@ -62,6 +68,8 @@ Danimarka Karayolu Trafik Otoritesi (*Færdselsstyrelsen*), kamu bilişim altyap
 
 🔗 [Proje Detayları](https://lnkd.in/drR5T5JR)
 
+
+<br>
 
 ## Çekirdek Güncellemesi: Linux 6.18 LTS Sahneye Çıktı
 **18 Aralık 2025**
@@ -78,6 +86,8 @@ Linux sistem yöneticileri için değişim zamanı! Linux 6.17 serisi yaşam dö
 🔗 [Kernel Sürüm Notları](https://lnkd.in/df24Qbyq)
 
 
+<br>
+
 ## Docker: "Hardened" İmajlar Artık Herkese Açık
 **19 Aralık 2025**
 
@@ -89,6 +99,8 @@ Bu, artık bireysel geliştiricilerin ve küçük start-up'ların da bankacılı
 
 🔗 [Docker Blog](https://lnkd.in/dmF-y9DJ)
 
+
+<br>
 
 ## PostgreSQL'de Yapay Zeka Devrimi: BM25 Algoritması
 **22 Aralık 2025**
