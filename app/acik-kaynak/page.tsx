@@ -3,6 +3,8 @@ import { Sidebar } from "@/components/sidebar"
 import { ArticleCard } from "@/components/article-card"
 import { Globe } from "lucide-react"
 
+export const dynamic = 'force-dynamic'
+
 export const metadata = {
     title: "Açık Kaynak Dünyası | Emir Faruk Topal",
     description: "Açık kaynak dünyasında yaşanan son gelişmeler, önemli haberler ve trendler.",
