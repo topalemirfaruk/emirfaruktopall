@@ -31,8 +31,8 @@ async function main() {
     Açık kaynaklı ofis yazılımı <strong>ONLYOFFICE</strong>, Linux için yerel <strong>ARM64</strong> sürümlerini resmen yayınladı. Artık Ubuntu, Fedora, OpenSUSE, Arch Linux ve diğer dağıtımları ARM donanım üzerinde (örneğin Raspberry Pi) kullananlar, emülatörlere veya kısıtlı web sürümlerine mahkum kalmadan tam özellikli bir ofis paketine sahip olabilecekler.
   </p>
 
-  <div class="my-8">
-    <div class="relative w-full overflow-hidden rounded-xl shadow-2xl border border-white/10 group">
+  <div class="flex justify-start my-8">
+    <div class="relative w-full max-w-[600px] overflow-hidden rounded-xl shadow-2xl border border-white/10 group">
       <img 
         src="${optimizeImage("https://itsfoss.com/content/images/2026/01/onlyoffice-desktop-editors-on-fedora-workstation.png")}" 
         alt="Fedora Workstation üzerinde çalışan ONLYOFFICE Masaüstü Editörü" 
@@ -40,10 +40,10 @@ async function main() {
       />
       <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
     </div>
-    <p class="text-sm text-center text-gray-500 mt-3 italic">
+  </div>
+    <p class="text-sm text-gray-500 mt-2 italic max-w-[600px]">
       ONLYOFFICE Masaüstü Editörleri artık ARM mimarisinde de yerel olarak çalışıyor.
     </p>
-  </div>
 
   <h2 class="text-2xl font-bold text-green-400 mt-8 mb-4">Neden Önemli?</h2>
   <p>
