@@ -28,19 +28,7 @@ async function main() {
     Şimdi ise bu programlama dilinin koruyucusu olan <strong>Python Software Foundation (PSF)</strong>, Claude'un arkasındaki şirket <strong>Anthropic</strong>'in vakfa önümüzdeki iki yıl içinde <strong>1.5 milyon dolar</strong> yatırım yapacağını duyurdu.
   </p>
 
-  <div class="flex justify-center my-8">
-    <div class="relative w-full max-w-[1200px] h-auto aspect-[1200/740] overflow-hidden rounded-xl shadow-2xl border border-white/10 group">
-      <img 
-        src="${optimizeImage("https://images.unsplash.com/photo-1649180556628-9ba704115795", 1200, 740)}" 
-        alt="Python ve Yapay Zeka İşbirliği" 
-        class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-105"
-      />
-      <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-    </div>
-  </div>
-    <p class="text-sm text-center text-gray-500 mt-2 italic w-full">
-      Python, modern yapay zeka geliştirmelerinin merkezinde yer alıyor.
-    </p>
+
 
   <h2 class="text-2xl font-bold text-green-400 mt-8 mb-4">Python Vakfı, ABD Hükümeti Fonunu Neden Reddetti?</h2>
   <p>
@@ -94,7 +82,6 @@ async function main() {
         slug,
         excerpt,
         content,
-        image: optimizeImage("https://images.unsplash.com/photo-1649180556628-9ba704115795", 1200, 740),
         category: "Haberler",
         author: "Emir Faruk Topal",
         avatar: "https://github.com/topalemirfaruk.png",
@@ -109,7 +96,6 @@ async function main() {
             title: articleData.title,
             content: articleData.content,
             excerpt: articleData.excerpt,
-            image: articleData.image,
             readTime: articleData.readTime,
             tags: articleData.tags,
             author: articleData.author,
