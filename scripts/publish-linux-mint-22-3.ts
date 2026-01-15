@@ -4,18 +4,18 @@ const prisma = new PrismaClient()
 
 // Helper to optimize image URLs (generic)
 const optimizeImage = (url: string, w: number = 1000, h?: number) => {
-    const separator = url.includes('?') ? '&' : '?';
-    const heightParam = h ? `&h=${h}` : '';
-    return `${url}${separator}auto=format&fit=crop&w=${w}${heightParam}&q=80`;
+  const separator = url.includes('?') ? '&' : '?';
+  const heightParam = h ? `&h=${h}` : '';
+  return `${url}${separator}auto=format&fit=crop&w=${w}${heightParam}&q=80`;
 }
 
 async function main() {
-    const title = "Linux Mint 22.3 \"Zena\" Resmen Yayınlandı! İşte İki Yeni Uygulama ve Yenilikler"
-    const slug = "linux-mint-22-3-zena-yayinlandi-yenilikler-inceleme"
+  const title = "Linux Mint 22.3 \"Zena\" Resmen Yayınlandı! İşte İki Yeni Uygulama ve Yenilikler"
+  const slug = "linux-mint-22-3-zena-yayinlandi-yenilikler-inceleme"
 
-    const excerpt = "Cinnamon 6.6 masaüstü ortamı, yenilenen menü tasarımı ve gelişmiş sistem yönetim araçlarıyla gelen Linux Mint 22.3 \"Zena\" sürümü, 2029'a kadar uzun süreli destek (LTS) sunuyor."
+  const excerpt = "Cinnamon 6.6 masaüstü ortamı, yenilenen menü tasarımı ve gelişmiş sistem yönetim araçlarıyla gelen Linux Mint 22.3 \"Zena\" sürümü, 2029'a kadar uzun süreli destek (LTS) sunuyor."
 
-    const content = `
+  const content = `
 <div class="space-y-6">
   <p class="lead text-xl text-gray-300">
     Birkaç ay önce Linux çekirdeği 6.14, XDG Desktop Portal XApp üzerinde vurgu rengi desteği ve giriş ekranında bulanıklık efektleri gibi birçok yenilikle gelen Linux Mint 22.2 "Zara" tanıtılmıştı.
@@ -119,10 +119,16 @@ async function main() {
     Yeni Gece Işığı uygulaması da gayet iyi çalışıyor ve sistem açılışında otomatik olarak devreye girecek şekilde zamanlanabiliyor.
   </p>
 
-  <div class="bg-gray-800/50 border-l-4 border-blue-500 p-4 rounded-r-lg my-6">
-    <p class="text-gray-300">
-      <strong>Video İnceleme:</strong> Sürümün detaylı bir incelemesini <a href="https://vimeo.com/1148885165?fl=pl&fe=cm" target="_blank" class="text-blue-400 hover:underline">buradan izleyebilirsiniz</a>.
-    </p>
+  <div class="flex justify-center my-8">
+    <div class="w-full max-w-[1200px] aspect-video rounded-xl overflow-hidden shadow-2xl border border-white/10">
+      <iframe 
+        src="https://player.vimeo.com/video/1148885165" 
+        class="w-full h-full" 
+        frameborder="0" 
+        allow="autoplay; fullscreen; picture-in-picture" 
+        allowfullscreen
+      ></iframe>
+    </div>
   </div>
 
   <h2 class="text-2xl font-bold text-green-400 mt-8 mb-4">Linux Mint 22.3 "Zena" Nasıl İndirilir?</h2>
@@ -170,45 +176,45 @@ async function main() {
 </div>
 `
 
-    const articleData = {
-        title,
-        slug,
-        excerpt,
-        content,
-        image: optimizeImage("https://itsfoss.com/content/images/size/w1000/2025/12/linux-mint-22-3-fastfetch-output.png", 1200, 740),
-        category: "Dağıtımlar",
-        author: "Emir Faruk Topal",
-        avatar: "https://github.com/topalemirfaruk.png",
-        date: new Date().toLocaleDateString('tr-TR', { day: 'numeric', month: 'long', year: 'numeric' }),
-        readTime: "6 dk",
-        tags: "linux,mint,zena,cinnamon,guncelleme,haberler,dagitimlar",
-    }
+  const articleData = {
+    title,
+    slug,
+    excerpt,
+    content,
+    image: optimizeImage("https://itsfoss.com/content/images/size/w1000/2025/12/linux-mint-22-3-fastfetch-output.png", 1200, 740),
+    category: "Dağıtımlar",
+    author: "Emir Faruk Topal",
+    avatar: "https://github.com/topalemirfaruk.png",
+    date: new Date().toLocaleDateString('tr-TR', { day: 'numeric', month: 'long', year: 'numeric' }),
+    readTime: "6 dk",
+    tags: "linux,mint,zena,cinnamon,guncelleme,haberler,dagitimlar",
+  }
 
-    const article = await prisma.article.upsert({
-        where: { slug: articleData.slug },
-        update: {
-            title: articleData.title,
-            content: articleData.content,
-            excerpt: articleData.excerpt,
-            image: articleData.image,
-            readTime: articleData.readTime,
-            tags: articleData.tags,
-            author: articleData.author,
-            avatar: articleData.avatar,
-            date: articleData.date,
-            category: articleData.category,
-        },
-        create: articleData
-    })
+  const article = await prisma.article.upsert({
+    where: { slug: articleData.slug },
+    update: {
+      title: articleData.title,
+      content: articleData.content,
+      excerpt: articleData.excerpt,
+      image: articleData.image,
+      readTime: articleData.readTime,
+      tags: articleData.tags,
+      author: articleData.author,
+      avatar: articleData.avatar,
+      date: articleData.date,
+      category: articleData.category,
+    },
+    create: articleData
+  })
 
-    console.log(`Makale başarıyla oluşturuldu/güncellendi: ${article.title} (${article.slug})`)
+  console.log(`Makale başarıyla oluşturuldu/güncellendi: ${article.title} (${article.slug})`)
 }
 
 main()
-    .catch((e) => {
-        console.error(e)
-        process.exit(1)
-    })
-    .finally(async () => {
-        await prisma.$disconnect()
-    })
+  .catch((e) => {
+    console.error(e)
+    process.exit(1)
+  })
+  .finally(async () => {
+    await prisma.$disconnect()
+  })
