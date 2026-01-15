@@ -32,7 +32,7 @@ async function main() {
   </p>
 
   <div class="flex justify-center my-8">
-    <div class="relative w-full max-w-[460px] overflow-hidden rounded-xl shadow-2xl border border-white/10 group">
+    <div class="relative w-full overflow-hidden rounded-xl shadow-2xl border border-white/10 group">
       <img 
         src="${optimizeImage("https://itsfoss.com/content/images/2026/01/onlyoffice-desktop-editors-on-fedora-workstation.png")}" 
         alt="Fedora Workstation üzerinde çalışan ONLYOFFICE Masaüstü Editörü" 
