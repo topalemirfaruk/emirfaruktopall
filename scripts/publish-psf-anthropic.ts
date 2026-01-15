@@ -4,18 +4,18 @@ const prisma = new PrismaClient()
 
 // Helper to optimize image URLs (Unsplash specific)
 const optimizeImage = (url: string, w: number = 1000, h?: number) => {
-    const separator = url.includes('?') ? '&' : '?';
-    const heightParam = h ? `&h=${h}` : '';
-    return `${url}${separator}auto=format&fit=crop&w=${w}${heightParam}&q=80`;
+  const separator = url.includes('?') ? '&' : '?';
+  const heightParam = h ? `&h=${h}` : '';
+  return `${url}${separator}auto=format&fit=crop&w=${w}${heightParam}&q=80`;
 }
 
 async function main() {
-    const title = "Python Vakfı, ABD Hükümetini Reddettikten Sonra Claude AI'dan 1.5 Milyon Dolar Fon Aldı"
-    const slug = "python-vakfi-claude-ai-anthropic-fon-yatirim"
+  const title = "Python Vakfı, ABD Hükümetini Reddettikten Sonra Claude AI'dan 1.5 Milyon Dolar Fon Aldı"
+  const slug = "python-vakfi-claude-ai-anthropic-fon-yatirim"
 
-    const excerpt = "Python Software Foundation (PSF), DEI anlaşmazlığı nedeniyle ABD hükümetinin fonunu reddettikten sonra Claude AI'ın geliştiricisi Anthropic'ten 1.5 milyon dolarlık güvenlik yatırımı aldı."
+  const excerpt = "Python Software Foundation (PSF), DEI anlaşmazlığı nedeniyle ABD hükümetinin fonunu reddettikten sonra Claude AI'ın geliştiricisi Anthropic'ten 1.5 milyon dolarlık güvenlik yatırımı aldı."
 
-    const content = `
+  const content = `
 <div class="space-y-6">
   <p class="lead text-xl text-gray-300">
     Python ve PyPI ekosisteminin güvenliğini artırmayı amaçlayan iki yıllık dev bir ortaklık duyuruldu. 
@@ -77,43 +77,45 @@ async function main() {
 </div>
 `
 
-    const articleData = {
-        title,
-        slug,
-        excerpt,
-        content,
-        category: "Haberler",
-        author: "Emir Faruk Topal",
-        avatar: "https://github.com/topalemirfaruk.png",
-        date: new Date().toLocaleDateString('tr-TR', { day: 'numeric', month: 'long', year: 'numeric' }),
-        readTime: "4 dk",
-        tags: "python,yapay-zeka,anthropic,claude,acik-kaynak,guvenlik,pypi",
-    }
+  const articleData = {
+    title,
+    slug,
+    excerpt,
+    content,
+    category: "Haberler",
+    image: "https://cdn.mos.cms.futurecdn.net/YREz6Cn4vWeQcSEYAhsr96-650-80.png.webp",
+    author: "Emir Faruk Topal",
+    avatar: "https://github.com/topalemirfaruk.png",
+    date: new Date().toLocaleDateString('tr-TR', { day: 'numeric', month: 'long', year: 'numeric' }),
+    readTime: "4 dk",
+    tags: "python,yapay-zeka,anthropic,claude,acik-kaynak,guvenlik,pypi",
+  }
 
-    const article = await prisma.article.upsert({
-        where: { slug: articleData.slug },
-        update: {
-            title: articleData.title,
-            content: articleData.content,
-            excerpt: articleData.excerpt,
-            readTime: articleData.readTime,
-            tags: articleData.tags,
-            author: articleData.author,
-            avatar: articleData.avatar,
-            date: articleData.date,
-            category: articleData.category,
-        },
-        create: articleData
-    })
+  const article = await prisma.article.upsert({
+    where: { slug: articleData.slug },
+    update: {
+      title: articleData.title,
+      content: articleData.content,
+      excerpt: articleData.excerpt,
+      image: articleData.image,
+      readTime: articleData.readTime,
+      tags: articleData.tags,
+      author: articleData.author,
+      avatar: articleData.avatar,
+      date: articleData.date,
+      category: articleData.category,
+    },
+    create: articleData
+  })
 
-    console.log(`Makale başarıyla oluşturuldu/güncellendi: ${article.title} (${article.slug})`)
+  console.log(`Makale başarıyla oluşturuldu/güncellendi: ${article.title} (${article.slug})`)
 }
 
 main()
-    .catch((e) => {
-        console.error(e)
-        process.exit(1)
-    })
-    .finally(async () => {
-        await prisma.$disconnect()
-    })
+  .catch((e) => {
+    console.error(e)
+    process.exit(1)
+  })
+  .finally(async () => {
+    await prisma.$disconnect()
+  })
