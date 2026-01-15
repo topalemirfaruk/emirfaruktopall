@@ -14,9 +14,10 @@ function slugify(text: string) {
 }
 
 // Helper to optimize image URLs
-const optimizeImage = (url: string) => {
+const optimizeImage = (url: string, w: number = 1000, h?: number) => {
   const separator = url.includes('?') ? '&' : '?';
-  return `${url}${separator}auto=format&fit=crop&w=1000&q=80`;
+  const heightParam = h ? `&h=${h}` : '';
+  return `${url}${separator}auto=format&fit=crop&w=${w}${heightParam}&q=80`;
 }
 
 async function main() {
@@ -32,11 +33,11 @@ async function main() {
   </p>
 
   <div class="flex justify-center my-8">
-    <div class="relative w-full overflow-hidden rounded-xl shadow-2xl border border-white/10 group">
+    <div class="relative w-full max-w-[1200px] h-auto aspect-[1200/740] overflow-hidden rounded-xl shadow-2xl border border-white/10 group">
       <img 
-        src="${optimizeImage("https://itsfoss.com/content/images/2026/01/onlyoffice-desktop-editors-on-fedora-workstation.png")}" 
+        src="${optimizeImage("https://itsfoss.com/content/images/2026/01/onlyoffice-desktop-editors-on-fedora-workstation.png", 1200, 740)}" 
         alt="Fedora Workstation üzerinde çalışan ONLYOFFICE Masaüstü Editörü" 
-        class="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-105"
+        class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-105"
       />
       <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
     </div>
