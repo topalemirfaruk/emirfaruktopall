@@ -27,7 +27,7 @@ async function main() {
   const excerpt = "Açık kaynak ofis paketi ONLYOFFICE, Linux için yerel ARM64 desteğini duyurdu. Raspberry Pi ve diğer ARM tabanlı cihazlarda artık tam performanslı ofis deneyimi mümkün."
 
   const content = `
-<div class="space-y-6 text-center">
+<div class="space-y-6">
   <p class="lead text-xl text-gray-300">
     Açık kaynaklı ofis yazılımı <strong>ONLYOFFICE</strong>, Linux için yerel <strong>ARM64</strong> sürümlerini resmen yayınladı. Artık Ubuntu, Fedora, OpenSUSE, Arch Linux ve diğer dağıtımları ARM donanım üzerinde (örneğin Raspberry Pi) kullananlar, emülatörlere veya kısıtlı web sürümlerine mahkum kalmadan tam özellikli bir ofis paketine sahip olabilecekler.
   </p>
@@ -50,7 +50,7 @@ async function main() {
   <p>
     Eğer ONLYOFFICE masaüstü düzenleyicilerini daha önce kullanmadıysanız, neler sunduğuna kısaca değinelim:
   </p>
-  <ul class="list-disc list-inside space-y-2 text-gray-300 marker:text-green-500 inline-block text-left">
+  <ul class="list-disc pl-6 space-y-2 text-gray-300 marker:text-green-500">
     <li><strong>Tamamen Ücretsiz ve Açık Kaynak:</strong> Şeffaf ve güvenilir.</li>
     <li><strong>Geniş Format Desteği:</strong> Metin belgeleri (DOCX, ODT), tablolar (XLSX, CSV), sunumlar (PPTX, ODP) ve PDF formları ile tam uyumluluk.</li>
     <li><strong>Çevrimdışı Çalışma:</strong> İnternet bağlantısına ihtiyaç duymadan, tamamen yerel olarak çalışır.</li>
