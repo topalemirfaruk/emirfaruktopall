@@ -123,7 +123,7 @@ async function main() {
     <div class="w-full max-w-[1200px] aspect-video rounded-xl overflow-hidden shadow-2xl border border-white/10">
       <iframe 
         src="https://player.vimeo.com/video/1148885165" 
-        class="w-full h-full" 
+        class="w-full h-full transform scale-[1.12]" 
         frameborder="0" 
         allow="autoplay; fullscreen; picture-in-picture" 
         allowfullscreen
